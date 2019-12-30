@@ -3,4 +3,33 @@
 - **ejemplo en ejecución**
 - [http://falconmasters.com/demos/layout_flexbox/](http://falconmasters.com/demos/layout_flexbox/)
 
-### [Inicio](https://youtu.be/F-KCncXMPk0?t=507)
+### [Inicio](https://youtu.be/F-KCncXMPk0?t=578)
+- Dejo todo html y css como en el ejemplo.
+```css
+body {background: #E9E9E9;}
+
+.contenedor {
+  width: 500px;
+  height: 200px;
+  background: #fff;
+  padding: 10px;
+  border: 10px solid #2C3E50;
+  margin: 20px;
+}
+
+.elemento {
+  color: #fff;
+  margin: 5px;
+  background: #E67E22;
+  text-align: center;
+}
+```
+```html
+<div class="contenedor">
+  <div class="elemento elemento1">1</div>
+  <div class="elemento elemento2">2</div>
+  <div class="elemento elemento3">3</div>
+  <div class="elemento elemento4">4</div>
+</div>
+```
+- ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/581x331/74fc4544d981ac564164674f4062f997/image.png)
