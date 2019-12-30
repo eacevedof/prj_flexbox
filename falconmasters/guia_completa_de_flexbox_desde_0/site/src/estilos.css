@@ -15,4 +15,5 @@ body {background: #E9E9E9;}
   width: 50px;
   background: #E67E22;
   text-align: center;
+  display:inline-block;
 }

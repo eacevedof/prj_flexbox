@@ -45,3 +45,6 @@ body {background: #E9E9E9;}
 }
 ```
 - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/565x266/1869d32c194426d18eb449812d639f33/image.png)
+- Como hariamos para ponerals en horizontal?
+  - Lo común es aplicar en **.elemento** `display:inline-block`, y funciona
+  - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/321x156/754dee5ab733d75443cd6486c6f55317/image.png)
