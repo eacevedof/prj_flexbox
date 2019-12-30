@@ -171,3 +171,14 @@ body {background: #E9E9E9;}
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/554x550/5858f1e1631a60594f5ce8ca3ea557fe/image.png)
   - **content**
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/551x553/cc0a952b0f284e70a36cb8c24c9bbe53/image.png)
+  - **Nota importante!** Si tenemos más de una fila no podemos usar align-items tenemos que hacerlo con content
+  ```css
+  si usamos nowrap, seria una sola fila no haria caso a align-content con lo cual no se centraria nada
+  .contenedor {
+    flex-wrap: nowrap;
+    justify-content: center; 
+    /* align-items: center; */
+    align-content: center; 
+  }  
+  ```
+  
