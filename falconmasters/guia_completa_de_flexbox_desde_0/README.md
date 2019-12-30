@@ -102,3 +102,8 @@ body {background: #E9E9E9;}
     }
     ```
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/465x295/e9921a996dabaa97a815a0e5aa8f527e/image.png)
+  - **nowrap**
+    - Todos se ajustarían en la fila redimensionandose con misma longitud
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/568x176/488df5b97259c2192df81cf7625e1e98/image.png)
+    - No respeta la longitud de 200 sino que es de 105
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/919x249/f6854a69a02ab31b26d34a4ea7774df7/image.png)

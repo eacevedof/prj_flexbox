@@ -19,7 +19,7 @@ body {background: #E9E9E9;}
   row-reverse, colum-reverse analogo al anterior pero en sentido inverso
   */
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }/*.contenedor*/
 
 .elemento {
