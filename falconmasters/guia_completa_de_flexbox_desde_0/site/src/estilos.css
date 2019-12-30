@@ -13,7 +13,7 @@ body {background: #E9E9E9;}
   display: -ms-flexbox;
   display:flex;
 
-  justify-content: center;
+  justify-content: space-between;
 }/*.contenedor*/
 
 .elemento {

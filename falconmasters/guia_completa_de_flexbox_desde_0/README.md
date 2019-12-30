@@ -121,3 +121,14 @@ body {background: #E9E9E9;}
   - Antes se usaba **margin: auto;** si esto no era suficiente habia que hacer mucha carpinteria con posiciones relativas, absolutas y left o right.
   - **center**
   - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/570x235/51378d2d48d467f49d5889348bed0c76/image.png)
+  ```css
+  justify-content: center;
+  ```
+  - **space-around**
+    - distribuye los elementos a lo ancho dejando espacio entre ellos
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/581x114/41f8217a4a6dd5190c3419608dd5e4e1/image.png)
+  - **space-between**
+    - parecido al anterior solo que los hijos de los extremos estan adheridos al borde del padre
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/576x154/7a5df872e18779c5f13aa799bd6102e9/image.png)
+    - Esto se puede aprovechar para el menu con el logo, serian dos "cuadrados" uno con cada función y el space-between los colocaria en los extremos
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/595x168/23ef3b74aeee11217247e387d3b67e0f/image.png)
