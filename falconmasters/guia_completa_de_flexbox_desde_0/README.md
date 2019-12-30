@@ -107,3 +107,5 @@ body {background: #E9E9E9;}
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/568x176/488df5b97259c2192df81cf7625e1e98/image.png)
     - No respeta la longitud de 200 sino que es de 105
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/919x249/f6854a69a02ab31b26d34a4ea7774df7/image.png)
+    - Por más que agreguemos divs hijos al contenedor el nowrap forzará que se ajusten en la linea horizontal, nunca pasarián a otra linea.
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/529x172/84b6db2973983564e0426e128f780f53/image.png)
