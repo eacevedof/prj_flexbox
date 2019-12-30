@@ -157,4 +157,17 @@ body {background: #E9E9E9;}
     - **baseline**
       - Baseline fuerza que la linea inferior de la fuente sea la misma para todos los hijos
       - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/517x137/aa43e8e69b49ad1e8667ae41474f9310/image.png)
-
+- **align-content**
+  - **center**
+    - todos los hijos los agrupa en un bloque y los centra
+- **align-items:center vs align-content:center**
+  ```css
+  .contenedor {
+    align-items: center;
+    align-content: center;
+  }  
+  ```
+  - **items**
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/554x550/5858f1e1631a60594f5ce8ca3ea557fe/image.png)
+  - **content**
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/551x553/cc0a952b0f284e70a36cb8c24c9bbe53/image.png)
