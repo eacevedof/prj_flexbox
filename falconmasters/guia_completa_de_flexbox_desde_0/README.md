@@ -66,4 +66,12 @@ body {background: #E9E9E9;}
 - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/323x264/00be388fac8c882839890e5e19d21310/image.png)
 #### prefijos
 - Sirven para identificar como se aplicará el css según el navegador
-- 
+```css
+.contenedor {
+  ...
+  /*prefijos*/
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:flex;
+}
+```

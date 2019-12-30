@@ -8,6 +8,9 @@ body {background: #E9E9E9;}
   border: 10px solid #2C3E50;
   margin: 20px;
 
+  /*prefijos*/
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display:flex;
 }
 
