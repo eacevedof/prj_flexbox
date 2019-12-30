@@ -80,4 +80,8 @@ body {background: #E9E9E9;}
 - contenedor **flex-direction**
   - acepta: row, column, row-reverse y column-reverse
   - row-reverse:
-    ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/569x124/d18138e174af5401aa2d9ca6d542f566/image.png)
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/569x124/d18138e174af5401aa2d9ca6d542f566/image.png)
+    - No los hace flotar a la derecha que es lo que se hace con float lo que pasa es que el 1 comienza de derecha a izquierda
+  - column-reverse:
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/570x272/4f9127a81d2fbee38692d8d9646c953b/image.png)
+- 
