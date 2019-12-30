@@ -132,3 +132,29 @@ body {background: #E9E9E9;}
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/576x154/7a5df872e18779c5f13aa799bd6102e9/image.png)
     - Esto se puede aprovechar para el menu con el logo, serian dos "cuadrados" uno con cada función y el space-between los colocaria en los extremos
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/595x168/23ef3b74aeee11217247e387d3b67e0f/image.png)
+- **align-items:**
+  - **flex-start** posiciona los elementos en la zona "top" del contenedor
+  - **flex-end** posiciona en el "bottom" del contenedor
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/562x266/c24d4b65e1cc2901a4e1f79356fce13f/image.png)
+    - es como una posicón fija
+    ```css
+    .contenedor {
+      justify-content: center;
+      align-items: flex-end;
+    }
+    ```
+    - **center** nos permite centrar en el eje vertical
+    ```css
+    posiciona en el punto medio del contenedor
+    .contenedor {
+      justify-content: center;
+      align-items: center;
+    }
+    ```
+    - **stretch** *conjuntamente con la altura de los hijos en auto*
+      - Estira los hijos ocupando toda la altura del padre
+      - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/570x261/30fed1639913e1fdba3f1784cbd1b263/image.png)
+    - **baseline**
+      - Baseline fuerza que la linea inferior de la fuente sea la misma para todos los hijos
+      - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/517x137/aa43e8e69b49ad1e8667ae41474f9310/image.png)
+
