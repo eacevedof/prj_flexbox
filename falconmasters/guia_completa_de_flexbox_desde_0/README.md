@@ -77,11 +77,28 @@ body {background: #E9E9E9;}
 ```
 - Como con **display:flex** ajusta el contenido (divs hijos) en linea pero ocupa todo el alto del contenedor (div padre) por eso ajustamos la altura de los hijos a 50px.
 - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/318x115/e34f7a808aa4432f6defe109d3b78d14/image.png)
-- contenedor **flex-direction**
+- contenedor: 
+  - **flex-direction**
   - acepta: row, column, row-reverse y column-reverse
   - row-reverse:
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/569x124/d18138e174af5401aa2d9ca6d542f566/image.png)
     - No los hace flotar a la derecha que es lo que se hace con float lo que pasa es que el 1 comienza de derecha a izquierda
   - column-reverse:
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/570x272/4f9127a81d2fbee38692d8d9646c953b/image.png)
-- 
+  - **flex-wrap: wrap;**
+    - Si tuviera los hijos con un ancho configurado que juntos superan el ancho del padre, por ejemplo el padre tien w:500px y cada hijo w:200 en total necesitarían un ancho de 800px sin contar margenes ni paddings.
+    ```css
+    .contenedor {
+      width: 500px;
+      height: 200px;
+      ...
+      /*prefijos*/
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display:flex;
+
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    ```
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/465x295/e9921a996dabaa97a815a0e5aa8f527e/image.png)
