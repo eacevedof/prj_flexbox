@@ -117,3 +117,7 @@ body {background: #E9E9E9;}
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/485x179/fbdfdabc9112716587f345eeeb42c480/image.png)
   - **flex-start**
     - Situa los hijos de izquierda a derecha
+- **justify-content**
+  - Antes se usaba **margin: auto;** si esto no era suficiente habia que hacer mucha carpinteria con posiciones relativas, absolutas y left o right.
+  - **center**
+  - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/570x235/51378d2d48d467f49d5889348bed0c76/image.png)
