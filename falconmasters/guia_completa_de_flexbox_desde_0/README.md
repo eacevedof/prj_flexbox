@@ -78,3 +78,6 @@ body {background: #E9E9E9;}
 - Como con **display:flex** ajusta el contenido (divs hijos) en linea pero ocupa todo el alto del contenedor (div padre) por eso ajustamos la altura de los hijos a 50px.
 - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/318x115/e34f7a808aa4432f6defe109d3b78d14/image.png)
 - contenedor **flex-direction**
+  - acepta: row, column, row-reverse y column-reverse
+  - row-reverse:
+    ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/569x124/d18138e174af5401aa2d9ca6d542f566/image.png)
