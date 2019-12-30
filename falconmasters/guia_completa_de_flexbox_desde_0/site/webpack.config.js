@@ -23,6 +23,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js'
   },
+
   module: { 
     rules: [
       {
@@ -47,7 +48,7 @@ module.exports = {
             // After all CSS loaders we use plugin to do his work.
             // It gets all transformed CSS and extracts it into separate
             // single bundled file
-            loader: MiniCssExtractPlugin.loader
+            loader: MiniCssExtractPlugin.loader,
           }, 
           {
             // This loader resolves url() and @imports inside CSS
@@ -90,6 +91,13 @@ module.exports = {
               outputPath: 'fonts'
             }
           }
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
         ]
       }
     ]
