@@ -7,6 +7,8 @@ body {background: #E9E9E9;}
   padding: 10px;
   border: 10px solid #2C3E50;
   margin: 20px;
+
+  display:flex;
 }
 
 .elemento {
@@ -15,5 +17,4 @@ body {background: #E9E9E9;}
   width: 50px;
   background: #E67E22;
   text-align: center;
-  display:inline-block;
 }

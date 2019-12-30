@@ -48,3 +48,19 @@ body {background: #E9E9E9;}
 - Como hariamos para ponerals en horizontal?
   - Lo común es aplicar en **.elemento** `display:inline-block`, y funciona
   - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/321x156/754dee5ab733d75443cd6486c6f55317/image.png)
+- Con flexbox ya no hace falta :) ~~*display:inline-block*~~
+- Vamos a trabajar con el contenedor
+- La primera y más importante propiedad es: **display:flex;**
+```css
+.contenedor {
+  width: 500px;
+  height: 200px;
+  background: #fff;
+  padding: 10px;
+  border: 10px solid #2C3E50;
+  margin: 20px;
+
+  display:flex; tambíen podría haber sido inline-flex pero nunca se va usar
+}
+```
+- ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/323x264/00be388fac8c882839890e5e19d21310/image.png)
