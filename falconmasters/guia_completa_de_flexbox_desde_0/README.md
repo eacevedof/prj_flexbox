@@ -33,3 +33,15 @@ body {background: #E9E9E9;}
 </div>
 ```
 - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/581x331/74fc4544d981ac564164674f4062f997/image.png)
+
+#### cambio el ancho
+```css
+.elemento {
+  color: #fff;
+  margin: 5px;
+  width: 50px;
+  background: #E67E22;
+  text-align: center;
+}
+```
+- ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/565x266/1869d32c194426d18eb449812d639f33/image.png)
