@@ -109,3 +109,11 @@ body {background: #E9E9E9;}
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/919x249/f6854a69a02ab31b26d34a4ea7774df7/image.png)
     - Por más que agreguemos divs hijos al contenedor el nowrap forzará que se ajusten en la linea horizontal, nunca pasarián a otra linea.
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/529x172/84b6db2973983564e0426e128f780f53/image.png)
+- **flex-flow:** *atajo*, de flex-direction y flex-wrap
+- **justify-content**
+  - Nos permite decidir la distribucion de los hijos y la posición que tendrán
+  - **flex-end**
+    - Da la impresion que es como un row-reverse, pero no, los hijos respetan su orden solo que se desplazan a la derecha
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/485x179/fbdfdabc9112716587f345eeeb42c480/image.png)
+  - **flex-start**
+    - Situa los hijos de izquierda a derecha

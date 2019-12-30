@@ -13,19 +13,13 @@ body {background: #E9E9E9;}
   display: -ms-flexbox;
   display:flex;
 
-  /*
-  row: visualizacion del contenido en horizontal
-  column: vis en vertical
-  row-reverse, colum-reverse analogo al anterior pero en sentido inverso
-  */
-  flex-direction: row;
-  flex-wrap: nowrap;
+  justify-content: flex-end;
 }/*.contenedor*/
 
 .elemento {
   color: #fff;
   margin: 5px;
-  width: 200px;
+  width: 50px;
   height: 50px;
   background: #E67E22;
   text-align: center;
