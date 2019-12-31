@@ -357,4 +357,5 @@ body {background: #E9E9E9;}
   ```
     - ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e0a652ea6755b53d4b23009/e2f25920c365aff25adb50f7b508918c/image.png)
   - Casi siempre los elementos van a tener un **flex-grow:1** si se desea que algún elemento vaya creciendo un poco más que los demas.
+- [**flex-shrink**](https://youtu.be/F-KCncXMPk0?t=2495)
 
