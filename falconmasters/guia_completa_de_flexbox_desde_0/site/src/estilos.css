@@ -9,20 +9,32 @@ body {background: #E9E9E9;}
   margin: 20px;
 
   /*config flex*/
-  display: -webkit-flex;
   display: -ms-flexbox;  
+  display:-webkit-box;  
   display:flex;
   
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-wrap: nowrap;
+  
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   
 }/*.contenedor*/
 
 .elemento {
-  flex-grow: 1;
-  flex-basis: 350px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 350px;
+      flex-basis: 350px;
   color: #fff;
   margin: 5px;
   width: 350px;
@@ -33,5 +45,6 @@ body {background: #E9E9E9;}
 }
 
 .elemento3{
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }

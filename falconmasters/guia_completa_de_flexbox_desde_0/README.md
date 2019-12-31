@@ -432,4 +432,56 @@ body {background: #E9E9E9;}
   }
   ```
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/1077x349/8eb8836d643cf79c9a8daf85afb01133/image.png)
-  
+- **NOTA** Hay que pasar el autoprefix a nuestra css
+  - He instalado Autoprefixer 2.2.0 en vscode
+  - Resultado
+  ```css
+  .contenedor {
+    width: 500px;
+    height: 300px;
+    background: #fff;
+    padding: 10px;
+    border: 10px solid #2C3E50;
+    margin: 20px;
+
+    /*config flex*/
+    display: -ms-flexbox;  
+    display:-webkit-box;  
+    display:flex;
+    
+    -ms-flex-wrap: nowrap;
+    
+        flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    
+  }/*.contenedor*/
+
+  .elemento {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 350px;
+        flex-basis: 350px;
+    color: #fff;
+    margin: 5px;
+    width: 350px;
+    height: 50px;
+    
+    background: #E67E22;
+    text-align: center;
+  }
+
+  .elemento3{
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }  
+  ```
