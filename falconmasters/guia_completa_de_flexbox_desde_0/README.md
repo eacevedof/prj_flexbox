@@ -184,7 +184,24 @@ body {background: #E9E9E9;}
 - Todo esto se puede utilizar para columnas: **contenedor: flex-direction:column;**
 ```css
 .contenedor:{
-  
+  ...
+  /*prefijos*/
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 ```
-- ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/586x387/c2d8bef36b4ba4fbaaed59d5f93a64c9/image.png)
+  - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/586x387/c2d8bef36b4ba4fbaaed59d5f93a64c9/image.png)
+```css
+.contenedor:{
+  ...
+  /*prefijos*/
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  /* align-content: center;  */ -> esto no tendria ningun efecto para esta configuración
+}
+```
+  - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/595x401/a3c10073984b60de0a9cd0dba4778357/image.png)
