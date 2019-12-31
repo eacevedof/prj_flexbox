@@ -13,8 +13,8 @@ body {background: #E9E9E9;}
   display: -ms-flexbox;  
   display:flex;
   
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-direction: row;
   justify-content: center;
   /* align-items: center; */
   align-content: center; /*esta solo funciona si flex-wrap:wrap */
@@ -25,7 +25,9 @@ body {background: #E9E9E9;}
   color: #fff;
   margin: 5px;
   /* width: 50px; */
-  flex-basis: 50px; 
+  flex-basis: 50px;
+  flex-grow: 1;
+
   height: 50px;
   background: #E67E22;
   text-align: center;

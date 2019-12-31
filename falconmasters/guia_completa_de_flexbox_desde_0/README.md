@@ -314,4 +314,27 @@ body {background: #E9E9E9;}
       - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/553x199/a0777b1cb3cf1e5158144d4404425bac/image.png)
   - flex-basis [*caso de uso 35:07*](https://youtu.be/F-KCncXMPk0?t=2107): puede significar tanto el alto como el ancho dependiendo de como tengamos la dirección de nuestro flex. Esto puede servir para evitar de tener que estar escribiendo el height dependiendo de la orientacion de la página. 
   - La página con un mediaquery se puede pasar de row a column y se conservaria la proporción de los hijos
+- [**flex-grow**](https://youtu.be/F-KCncXMPk0?t=2182)
+  ```css
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    align-content: center; /*esta solo funciona si flex-wrap:wrap */
+    
+  }/*.contenedor*/
+
+  .elemento {
+    color: #fff;
+    margin: 5px;
+    /* width: 50px; */
+    flex-basis: 50px;
+    flex-grow: 1;
+
+    height: 50px;
+    background: #E67E22;
+    text-align: center;
+  }
+  ```
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/564x207/e1d94c14aa2538643248763a83f54405/image.png)
   
