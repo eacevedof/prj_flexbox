@@ -312,3 +312,6 @@ body {background: #E9E9E9;}
     }
     ```
       - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/553x199/a0777b1cb3cf1e5158144d4404425bac/image.png)
+  - flex-basis [*caso de uso 35:07*](https://youtu.be/F-KCncXMPk0?t=2107): puede significar tanto el alto como el ancho dependiendo de como tengamos la dirección de nuestro flex. Esto puede servir para evitar de tener que estar escribiendo el height dependiendo de la orientacion de la página. 
+  - La página con un mediaquery se puede pasar de row a column y se conservaria la proporción de los hijos
+  
