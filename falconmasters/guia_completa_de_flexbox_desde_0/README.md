@@ -415,3 +415,21 @@ body {background: #E9E9E9;}
   }  
   ```
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/556x204/df9c440327a87771647f07a8d4cc4303/image.png)
+- [**align-self:**](https://youtu.be/F-KCncXMPk0?t=2877)
+  - Sirve para indicar una alineacion vertical u horizontal de un hijo en particular
+  ```css
+  solo toco .elemnto3
+  .elemento3{
+    align-self: flex-start;
+  }
+  ```
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/1088x314/bde6d5cffd5955307697f09912941686/image.png)
+  ```css
+  para que funcione strecth hay que aplicar height: auto
+  .elemento3{
+    align-self: stretch;
+    height: auto;
+  }
+  ```
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/1077x349/8eb8836d643cf79c9a8daf85afb01133/image.png)
+  

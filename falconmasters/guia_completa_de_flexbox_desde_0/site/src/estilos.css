@@ -2,7 +2,7 @@ body {background: #E9E9E9;}
 
 .contenedor {
   width: 500px;
-  height: 150px;
+  height: 300px;
   background: #fff;
   padding: 10px;
   border: 10px solid #2C3E50;
@@ -21,7 +21,6 @@ body {background: #E9E9E9;}
 }/*.contenedor*/
 
 .elemento {
-  order: 2;
   flex-grow: 1;
   flex-basis: 350px;
   color: #fff;
@@ -33,6 +32,6 @@ body {background: #E9E9E9;}
   text-align: center;
 }
 
-.elemento2{
-  order:1;
+.elemento3{
+  align-self: flex-start;
 }
