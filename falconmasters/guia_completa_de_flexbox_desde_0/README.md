@@ -388,5 +388,10 @@ body {background: #E9E9E9;}
   }
   ```
 - [**order**](https://youtu.be/F-KCncXMPk0?t=2736)
-
+  ```css
+  .elemento2{
+    order:1;
+  }
+  ```
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/992x329/10a266a8fae8f86dfd6d3c143ad5961a/image.png)
 
