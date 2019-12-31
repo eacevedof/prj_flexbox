@@ -21,7 +21,9 @@ body {background: #E9E9E9;}
 }/*.contenedor*/
 
 .elemento {
-  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 350px;
+
   color: #fff;
   margin: 5px;
   width: 350px;
@@ -29,8 +31,4 @@ body {background: #E9E9E9;}
   
   background: #E67E22;
   text-align: center;
-}
-
-.elemento2 {
-  flex-shrink: 2;
 }

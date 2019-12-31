@@ -376,5 +376,16 @@ body {background: #E9E9E9;}
   }  
   ```
   - ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e0a652ea6755b53d4b23009/6e4ec487fafbb172591fa9c4d64ad80f/image.png)
+- Atajo para **flex-grow y flex-srhink** `flex:<grow> <shrink> <basis>`
+  ```css
+  .elemento {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 350px;
+
+    EQUIVALE A:
+    flex:1 1 350px;  
+  }
+  ```
 
 
