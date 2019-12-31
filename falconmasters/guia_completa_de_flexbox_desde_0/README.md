@@ -358,4 +358,23 @@ body {background: #E9E9E9;}
     - ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e0a652ea6755b53d4b23009/e2f25920c365aff25adb50f7b508918c/image.png)
   - Casi siempre los elementos van a tener un **flex-grow:1** si se desea que algún elemento vaya creciendo un poco más que los demas.
 - [**flex-shrink**](https://youtu.be/F-KCncXMPk0?t=2495)
+  - Es lo opuesto a flex-grow, es la proporcion de reducción de ancho. Si tenemos un ancho fijo para cada hijo que supera el ancho del padre todos menguan en anchura para visualizarse en linea. Con shrink le podemos indicar en que proporcion deben reducirse.
+  ```css
+  .elemento {
+    flex-shrink: 1;
+    color: #fff;
+    margin: 5px;
+    width: 350px;
+    height: 50px;
+    
+    background: #E67E22;
+    text-align: center;
+  }
+
+  .elemento2 {
+    flex-shrink: 2;
+  }  
+  ```
+  - ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e0a652ea6755b53d4b23009/6e4ec487fafbb172591fa9c4d64ad80f/image.png)
+
 
