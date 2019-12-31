@@ -205,7 +205,7 @@ body {background: #E9E9E9;}
 }
 ```
   - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/595x401/a3c10073984b60de0a9cd0dba4778357/image.png)
-- Volvemos a la config como lo teniamos
+- Volvemos a la config como lo teniamos [min 32:38](https://youtu.be/F-KCncXMPk0?t=1958)
 ```css
 .contenedor{
   ...
@@ -214,11 +214,11 @@ body {background: #E9E9E9;}
   display: -webkit-flex;
   display: -ms-flexbox;
   
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* align-content: center;  */
+  align-content: space-around; /* esta solo funciona si flex-wrap:wrap */
   
 }/*.contenedor*/
 
@@ -232,3 +232,48 @@ body {background: #E9E9E9;}
 }
 ```
   - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/583x289/d63032c6b95bc42f3da6998a47d66c23/image.png)
+- En este punto hemos acabado con todas las **propiedades del contenedor**
+- Vamos con los hijos *.elemento*
+- **flex-basis**
+  - Es similar al **with**
+  - `flex-basis: 150px;`
+  - Con esta config no se ve igual que en el [video](https://youtu.be/F-KCncXMPk0?t=2068)
+  ```css
+    .contenedor {
+    width: 500px;
+    height: 200px;
+    background: #fff;
+    padding: 10px;
+    border: 10px solid #2C3E50;
+    margin: 20px;
+
+    /*config flex*/
+    display: -webkit-flex;
+    display: -ms-flexbox;  
+    display:flex;
+    
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    align-content: center; /*esta solo funciona si flex-wrap:wrap */
+    
+  }/*.contenedor*/
+
+  .elemento {
+    color: #fff;
+    margin: 5px;
+    /* width: 50px; */
+    flex-basis: 150px; 
+    height: 50px;
+    background: #E67E22;
+    text-align: center;
+  }
+  ```
+  - Video:
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/1101x456/d03071988c7e5d637ff5b776b2acd675/image.png)
+  - Mio:
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/562x260/0fd982b1075593ef397fdf24e2882462/image.png)
+  - creo que tiene que ver con flex-basis, cuando lo cambio a 200px si se ve igual, el estado de *.elemento* en el video es este (igual al que tengo yo):
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/540x426/6e52c3513b08c429030bff3fe5326e1b/image.png)
+  
