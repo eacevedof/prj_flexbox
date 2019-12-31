@@ -205,3 +205,30 @@ body {background: #E9E9E9;}
 }
 ```
   - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/595x401/a3c10073984b60de0a9cd0dba4778357/image.png)
+- Volvemos a la config como lo teniamos
+```css
+.contenedor{
+  ...
+  /*config flex*/
+  display:flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* align-content: center;  */
+  
+}/*.contenedor*/
+
+.elemento {
+  color: #fff;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  background: #E67E22;
+  text-align: center;
+}
+```
+  - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/583x289/d63032c6b95bc42f3da6998a47d66c23/image.png)
