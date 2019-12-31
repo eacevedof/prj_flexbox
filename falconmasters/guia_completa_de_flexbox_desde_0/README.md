@@ -181,4 +181,10 @@ body {background: #E9E9E9;}
     align-content: center; 
   }  
   ```
+- Todo esto se puede utilizar para columnas: **contenedor: flex-direction:column;**
+```css
+.contenedor:{
   
+}
+```
+- ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/586x387/c2d8bef36b4ba4fbaaed59d5f93a64c9/image.png)
