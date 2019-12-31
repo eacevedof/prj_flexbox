@@ -23,11 +23,15 @@ body {background: #E9E9E9;}
 .elemento {
   color: #fff;
   margin: 5px;
-  /* width: 50px; */
+  width: 50px;
   flex-basis: 50px;
   flex-grow: 1;
 
   height: 50px;
   background: #E67E22;
   text-align: center;
+}
+
+.elemento2 {
+  flex-grow: 2;
 }

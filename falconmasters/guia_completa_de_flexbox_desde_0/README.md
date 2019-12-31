@@ -315,6 +315,8 @@ body {background: #E9E9E9;}
   - flex-basis [*caso de uso 35:07*](https://youtu.be/F-KCncXMPk0?t=2107): puede significar tanto el alto como el ancho dependiendo de como tengamos la dirección de nuestro flex. Esto puede servir para evitar de tener que estar escribiendo el height dependiendo de la orientacion de la página. 
   - La página con un mediaquery se puede pasar de row a column y se conservaria la proporción de los hijos
 - [**flex-grow**](https://youtu.be/F-KCncXMPk0?t=2182)
+  - Fuerza el ajuste de los hijos a lo ancho del padre
+  - Es el crecimiento proporcional de un hijo con respecto a sus hermanos
   - *nemo: row-items, colum-content*
   ```css
     flex-wrap: nowrap;
@@ -326,7 +328,7 @@ body {background: #E9E9E9;}
   .elemento {
     color: #fff;
     margin: 5px;
-    /* width: 50px; */
+    width: 50px;
     flex-basis: 50px;
     flex-grow: 1;
 
@@ -336,4 +338,23 @@ body {background: #E9E9E9;}
   }
   ```
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/557x217/180c2d6cb2d2539610f204a15ced76f5/image.png)
-  
+  - Aplicando otro flex-grow a un hermano
+  - Si nos fijamos aplicamos un ancho fijo de 50px pero se omite pq se intenta ocupar todo el ancho del padre, por defecto todos tienen un ancho proporcional de una undidad: flex-grow:1, a un hermano le rescribimos el flex-grow y le decimos que debe ser mayor, a 2, que no es el doble de ancho de los hermanos, sino el doble de crecimiento.
+  ```css
+  .elemento {
+    color: #fff;
+    margin: 5px;
+    flex-basis: 50px;
+    flex-grow: 1;
+    height: 50px;
+    background: #E67E22;
+    text-align: center;
+  }
+
+  .elemento2 {
+    flex-grow: 1;
+  }
+  ```
+    - ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e0a652ea6755b53d4b23009/e2f25920c365aff25adb50f7b508918c/image.png)
+  - Casi siempre los elementos van a tener un **flex-grow:1** si se desea que algún elemento vaya creciendo un poco más que los demas.
+
