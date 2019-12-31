@@ -394,4 +394,22 @@ body {background: #E9E9E9;}
   }
   ```
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/992x329/10a266a8fae8f86dfd6d3c143ad5961a/image.png)
+  ```css
+  .elemento {
+    order: 2; todos los elementos iran en seguna posicion
+    flex-grow: 1;
+    flex-basis: 350px;
+    color: #fff;
+    margin: 5px;
+    width: 350px;
+    height: 50px;
+    
+    background: #E67E22;
+    text-align: center;
+  }
 
+  .elemento2{
+    order:1; este pasara a primera
+  }  
+  ```
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/556x204/df9c440327a87771647f07a8d4cc4303/image.png)
