@@ -16,8 +16,7 @@ body {background: #E9E9E9;}
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: center;
-  /* align-items: center; */
-  align-content: center; /*esta solo funciona si flex-wrap:wrap */
+  align-items: center;
   
 }/*.contenedor*/
 
