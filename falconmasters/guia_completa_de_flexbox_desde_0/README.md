@@ -235,7 +235,7 @@ body {background: #E9E9E9;}
 - En este punto hemos acabado con todas las **propiedades del contenedor**
 - Vamos con los hijos *.elemento*
 - **flex-basis**
-  - Es similar al **with**
+  - Es similar al **with**, la diferencia es que *flex-basis* es dinámica, quiere decir que se cambiamos la *dirección* (flex-direction) de row a column se autoajustaría
   - `flex-basis: 150px;`
   - Con esta config no se ve igual que en el [video](https://youtu.be/F-KCncXMPk0?t=2068)
   ```css
@@ -275,5 +275,40 @@ body {background: #E9E9E9;}
   - Mio:
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/562x260/0fd982b1075593ef397fdf24e2882462/image.png)
   - creo que tiene que ver con flex-basis, cuando lo cambio a 200px si se ve igual, el estado de *.elemento* en el video es este (igual al que tengo yo):
+  - Otra forma de igualar al video es con alto del div padre a 150px
     - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/540x426/6e52c3513b08c429030bff3fe5326e1b/image.png)
-  
+  - **con: flex-direction:column;**
+    - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/573x259/013e2c085a437a28ceec5c26a4000127/image.png)
+    ```css
+    .contenedor {
+      width: 500px;
+      height: 150px;
+      background: #fff;
+      padding: 10px;
+      border: 10px solid #2C3E50;
+      margin: 20px;
+
+      /*config flex*/
+      display: -webkit-flex;
+      display: -ms-flexbox;  
+      display:flex;
+      
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      /* align-items: center; */
+      align-content: center; /*esta solo funciona si flex-wrap:wrap */
+      
+    }/*.contenedor*/
+
+    .elemento {
+      color: #fff;
+      margin: 5px;
+      /* width: 50px; */
+      flex-basis: 50px; 
+      height: 50px;
+      background: #E67E22;
+      text-align: center;
+    }
+    ```
+      - ![](https://trello-attachments.s3.amazonaws.com/5e0a652ea6755b53d4b23009/553x199/a0777b1cb3cf1e5158144d4404425bac/image.png)
