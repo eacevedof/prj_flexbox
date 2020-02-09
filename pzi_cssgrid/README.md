@@ -127,7 +127,7 @@ body {
 ```
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/162cff07357debc3716d87ee148bf43e/image.png)
 
-### [07 - ]()
+### [07 - Espaciado entre filas y columnas](https://platzi.com/clases/1229-css-grid-layout/10077-espaciado-entre-filas-y-columnas/)
 -
 ### [08 - ]()
 -
