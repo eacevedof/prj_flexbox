@@ -496,8 +496,9 @@ body {
 ```
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/23d2a06e07e96ad1963113a961934473/image.png)
 
-### [15 - ]()
--
+### [15 - Alineación de filas y columnas](https://platzi.com/clases/1229-css-grid-layout/10085-alineacion-de-filas-y-columnas/)
+- 
+
 ### [16 - ]()
 -
 ### [17 - ]()
