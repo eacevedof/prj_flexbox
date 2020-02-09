@@ -518,8 +518,9 @@ body {
 ```
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/7e04d09760e26920d867d1884e459500/image.png)
 
-### [16 - ]()
--
+### [16 - Layout de Instagram](https://platzi.com/clases/1229-css-grid-layout/10086-layout-de-instagram/)
+- 
+
 ### [17 - ]()
 -
 ### [18 - ]()
