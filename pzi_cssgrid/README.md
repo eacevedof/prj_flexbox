@@ -393,7 +393,7 @@ body {
 ```
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/01e5d34174fa5628a69e45f9bf1770bc/image.png)
 
-### [13 - ]()
+### [13 - Manejando el grid implícito](https://platzi.com/clases/1229-css-grid-layout/10083-manejando-el-grid-implicito/)
 -
 ### [14 - ]()
 -
