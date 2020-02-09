@@ -80,7 +80,20 @@ body {
 - ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/ad269457800d64e107eea8372adcd55d/image.png)
 
 ### [05 - Definiendo filas](https://platzi.com/clases/1229-css-grid-layout/10075-definiendo-filas/)
--
+- `grid-template-rows: 300px 300px;`
+- Hace que las dos primeras filas sean mucho más grandes que las restantes ya que entra en juego el concepto de grid explicito y grid implicito
+- Implicito, lo que se asume por defecto
+- Explicito. los extras
+```css
+.container {
+  display: grid;
+  grid-template-columns: 25% 200px 25%;
+  grid-template-rows: 300px 150px;
+  /*template a secas substituye las otras*/
+  grid-template: 300px 100px 100px / 25% 200px 25%;
+}
+```
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/52e707998f249d5a726348acea0a25c3/image.png)
 
 ### [06 - ]()
 -
