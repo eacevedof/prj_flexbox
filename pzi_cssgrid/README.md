@@ -452,7 +452,49 @@ body {
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/2aea7d150667f258607824bee172c49b/image.png)
 
 ### [14 - Alineación de contenido](https://platzi.com/clases/1229-css-grid-layout/10084-alineacion-de-contenido/)
-- 
+- se usa justify y align, existe el align-self
+```css
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  border: 1px solid purple;
+  display: grid;
+  grid-gap: 5px;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  justify-items: center;
+  align-items: center;
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+.item:nth-of-type(5){
+  align-self:start;
+  justify-self:start;
+}
+``` 
+```html
+<section class="container">
+  <div class="item">item #1</div>
+  <div class="item">item #2</div>
+  <div class="item">item #3</div>
+  <div class="item">item #4</div>
+  <div class="item">item #5</div>
+  <div class="item">item #6</div>
+  <div class="item">item #7</div>
+  <div class="item">item #8</div>
+  <div class="item">item #9</div>
+  <div class="item">item #10</div>
+  <div class="item">item #11</div>
+  <div class="item">item #12</div>
+</section>  
+```
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/23d2a06e07e96ad1963113a961934473/image.png)
 
 ### [15 - ]()
 -
