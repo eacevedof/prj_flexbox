@@ -394,7 +394,63 @@ body {
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/01e5d34174fa5628a69e45f9bf1770bc/image.png)
 
 ### [13 - Manejando el grid implícito](https://platzi.com/clases/1229-css-grid-layout/10083-manejando-el-grid-implicito/)
--
+```css
+.container {
+  border: 1px solid purple;
+  display: grid;
+  
+  grid-template-columns: [ci] 1fr [c1] 1fr [c2] 1fr [c3] 1fr [dest-end] 1fr [c5] 1fr [dest2-end] 1fr [c7] 1fr [cf];
+  /* grid-template-rows: [fi] 200px [f2] 200px [ff]; */
+  grid-gap: 5px;
+  height: 100vh;
+  /*por defecto es row*/
+  /* grid-auto-flow: column; */
+  /* grid-auto-columns: 50px 100px; */
+  grid-auto-rows: 50px 100px;
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+/*nth: toma el cuarto elemento de tipo item*/
+.item:nth-of-type(1){
+  grid-column: ci / dest-end;
+  grid-row: fi / ff
+
+}
+
+.item:nth-of-type(2){
+  grid-column: dest-end / dest2-end;
+  grid-row: fi / ff
+}
+
+.item:nth-of-type(3){
+  grid-column: dest2-end / cf; 
+```
+```html
+  <section class="container">
+    <div class="item">item #1</div>
+    <div class="item">item #2</div>
+    <div class="item">item #3</div>
+    <div class="item">item #4</div>
+    <div class="item">item #5</div>
+
+    <div class="item">item #5</div>
+    <div class="item">item #5</div>
+    <div class="item">item #5</div>
+    <div class="item">item #5</div>
+    <div class="item">item #5</div>
+    <div class="item">item #5</div>
+    <div class="item">item #5</div>
+    <div class="item">item #5</div>
+    <div class="item">item #5</div>
+    <div class="item">item #5</div>
+  </section>  
+```
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/2aea7d150667f258607824bee172c49b/image.png)
+
 ### [14 - ]()
 -
 ### [15 - ]()
