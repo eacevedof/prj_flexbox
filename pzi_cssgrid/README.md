@@ -451,8 +451,9 @@ body {
 ```
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/2aea7d150667f258607824bee172c49b/image.png)
 
-### [14 - ]()
--
+### [14 - Alineación de contenido](https://platzi.com/clases/1229-css-grid-layout/10084-alineacion-de-contenido/)
+- 
+
 ### [15 - ]()
 -
 ### [16 - ]()
