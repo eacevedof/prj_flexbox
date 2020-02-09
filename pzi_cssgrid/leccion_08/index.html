@@ -14,31 +14,25 @@ body {
   grid-template-columns: 25% 200px 25%;
   grid-template-rows: 300px 150px;
   /*template a secas substituye las otras*/
-  grid-template: 300px 100px 100px / 50% 200px 100px;
-  
-  /*
-  grid-column-gap: 30px;
-  grid-row-gap: 50px;
-  - atajo de las dos anteriores
-  grid-gap: filas x columnas*/
-  grid-gap: 10px 100px;
+  grid-template: 300px 100px 100px / 1fr 1fr 1fr;
+  /*crea 4 columnas de 1 proporcion, equivale a un ancho de 25%*/
+  grid-template: 300px 100px 100px / repeat(4,1fr);
+  /*cuatro columnas que se muevan entre 200px de minimo a 25% de máximo*/
+  grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr));
+  /*primera columna minmax() y las siguientes 1fr*/
+  grid-template: 300px 100px 100px / minmax(200px, 1fr) 1fr 1fr 1fr;
+  grid-gap: 10px;
 }
 .item {
   background: lightblue;
   padding: 10px;
   border: 1px solid red;
-/*
-  margin-right: 10px;
-  margin-bottom: 10px;
-*/
 }
 
 /*nth: toma el cuarto elemento de tipo item*/
 .item:nth-of-type(4){
   background: blue;
   overflow: auto;
-  /*display: subgrid;  en un futuro existira y nos ahorramos repetir grid*/
-  /*display: inline-grid;*/
   display:grid;
   grid-template: 50px 50px 50px / 200px 200px 200px;
 }

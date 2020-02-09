@@ -161,8 +161,39 @@ body {
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/2fa26bb13ab1df845db061c2598d39aa/image.png)
 
 ### [08 - Repetidores, unidades de medida y funciones](https://platzi.com/clases/1229-css-grid-layout/10078-repetidores-unidades-de-medida-y-funciones/)
-- 
+- La diferencia entre **auto** y **fr** es que auto depende del ancho del contenido y si este tiene un overflow el padre crecería. fr es una fracción del ancho, es decir como un porcentaje
+- funciones **repeat(), minmas()**
+```css
+.container {
+  border: 1px solid purple;
+  display: grid;
+  grid-template-columns: 25% 200px 25%;
+  grid-template-rows: 300px 150px;
+  /*template a secas substituye las otras*/
+  grid-template: 300px 100px 100px / 1fr 1fr 1fr;
+  /*crea 4 columnas de 1 proporcion, equivale a un ancho de 25%*/
+  grid-template: 300px 100px 100px / repeat(4,1fr);
+  /*cuatro columnas que se muevan entre 200px de minimo a 25% de máximo*/
+  grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr));
+  /*primera columna minmax() y las siguientes 1fr*/
+  grid-template: 300px 100px 100px / minmax(200px, 1fr) 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
 
+/*nth: toma el cuarto elemento de tipo item*/
+.item:nth-of-type(4){
+  background: blue;
+  overflow: auto;
+  display:grid;
+  grid-template: 50px 50px 50px / 200px 200px 200px;
+}
+```
+- ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/c257a5a137a80b2279981cfdb9c5a75a/image.png)
 ### [09 - ]()
 -
 ### [10 - ]()
