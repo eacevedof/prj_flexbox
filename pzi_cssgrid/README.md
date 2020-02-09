@@ -195,7 +195,64 @@ body {
 ```
 - ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/c257a5a137a80b2279981cfdb9c5a75a/image.png)
 ### [09 - Definiendo áreas de contenido](https://platzi.com/clases/1229-css-grid-layout/10079-definiendo-areas-de-contenido/)
-- 
+- grid-template-areas y grid-area
+```css
+.container {
+  border: 1px solid purple;
+  display: grid;
+  grid-template-columns: 25% 200px 25%;
+  grid-template-rows: 300px 150px;
+  /*primera columna minmax() y las siguientes 1fr*/
+  grid-template: 100px 1fr 150px / 200px 1fr;
+  grid-gap: 10px;
+  height: 100vh;
+  /*estos valores se podran usar asignar a posteriore a grid-area*/
+  grid-template-areas: "header header"
+                       "left contenido"
+                       "footer footer"
+  ;
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+/*nth: toma el cuarto elemento de tipo item*/
+.item:nth-of-type(4){
+  background: blue;
+  overflow: auto;
+  display:grid;
+  grid-template: 50px 50px 50px / 200px 200px 200px;
+}
+
+.item .item {
+  background: yellow;
+}
+
+.header {
+  grid-area:header;
+}
+
+.left{
+  grid-area: left;
+}
+.contenido {
+  grid-area:contenido;
+}
+.footer {
+  grid-area: footer;
+}
+```
+```html
+<section class="container">
+  <div class="item header">header</div>
+  <div class="item left">left</div>
+  <div class="item contenido">contenido</div>
+  <div class="item footer">footer</div>
+</section>  
+```
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/38ac9146f5e5f6fd4bd1f6ce34e3b3c4/image.png)
 ### [10 - ]()
 -
 ### [11 - ]()
