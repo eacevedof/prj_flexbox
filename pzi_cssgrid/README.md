@@ -61,6 +61,22 @@ php -S localhost:3000 -t leccion_03
 - Aplicando `grid-template-columns: 200px 200px 200px`
 https://trello-attachments.s3.amazonaws.com/5e4021a455d6a4209892fa16/1061x274/0a4236f4890854cb13dd8f4a72877c5e/image.png
 - Se puede hacer dinámico ``
+```html
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: 25% 200px 25%;
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+</style>
+```
 - ![]()
 
 
