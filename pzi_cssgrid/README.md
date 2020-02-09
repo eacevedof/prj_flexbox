@@ -59,7 +59,7 @@ php -S localhost:3000 -t leccion_03
 ```
 - ![](https://trello-attachments.s3.amazonaws.com/5e4021a455d6a4209892fa16/401x244/a615cb23ad5e35e76d3285d77d7880d9/image.png)
 - Aplicando `grid-template-columns: 200px 200px 200px`
-https://trello-attachments.s3.amazonaws.com/5e4021a455d6a4209892fa16/1061x274/0a4236f4890854cb13dd8f4a72877c5e/image.png
+![](https://trello-attachments.s3.amazonaws.com/5e4021a455d6a4209892fa16/1061x274/0a4236f4890854cb13dd8f4a72877c5e/image.png)
 - Se puede hacer dinámico ``
 ```html
 <style>
