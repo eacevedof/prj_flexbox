@@ -128,7 +128,40 @@ body {
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/162cff07357debc3716d87ee148bf43e/image.png)
 
 ### [07 - Espaciado entre filas y columnas](https://platzi.com/clases/1229-css-grid-layout/10077-espaciado-entre-filas-y-columnas/)
--
+- *Gap*
+- Espaciado vertical: `margin-right`
+- Espaciado horizontal: `margin-bottom: 10px;`
+- Si bien los margenes permiten crear el espacio afectan al tamaño del contenedor
+```css
+.container {
+  border: 1px solid purple;
+  display: grid;
+  grid-template-columns: 25% 200px 25%;
+  grid-template-rows: 300px 150px;
+  /*template a secas substituye las otras*/
+  grid-template: 300px 100px 100px / 50% 200px 100px;
+  
+  /*
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  - atajo de las dos anteriores
+  grid-gap: filas x columnas*/
+  grid-gap: 10px 100px;
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+/*
+  margin-right: 10px;
+  margin-bottom: 10px;
+*/
+}
+```
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/2fa26bb13ab1df845db061c2598d39aa/image.png)
+
+
+
 ### [08 - ]()
 -
 ### [09 - ]()
