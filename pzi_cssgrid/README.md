@@ -96,7 +96,8 @@ body {
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/52e707998f249d5a726348acea0a25c3/image.png)
 
 ### [06 - Grids identados y tipos de displays](https://platzi.com/clases/1229-css-grid-layout/10076-grids-identados-y-tipos-de-displays/)
--
+- ![](https://trello-attachments.s3.amazonaws.com/5e4021a455d6a4209892fa16/1121x347/86609377db2dcbd1cbe181cd7b0cd01e/image.png)
+
 
 ### [07 - ]()
 -
