@@ -254,7 +254,66 @@ body {
 ```
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/38ac9146f5e5f6fd4bd1f6ce34e3b3c4/image.png)
 ### [10 - Definiendo el tamaño de las columnas dentro de un grid](https://platzi.com/clases/1229-css-grid-layout/10080-definiendo-el-tamano-de-los-columnas-dentro-de-un-/)
--
+- El layout que queremos hacer:
+  - ![](https://trello-attachments.s3.amazonaws.com/5e4021a455d6a4209892fa16/806x754/f49ac32b6f061707e49d957c19dfe50e/image.png)
+```css
+.container {
+  border: 1px solid purple;
+  display: grid;
+  
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+  height: 100vh;
+  /*estos valores se podran usar asignar a posteriore a grid-area*/
+  grid-template-areas: "header header"
+                       "left contenido"
+                       "footer footer"
+  ;
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+/*nth: toma el cuarto elemento de tipo item*/
+.item:nth-of-type(1){
+  background: blue;
+  grid-column-start: 1;
+  /*el valor es el numero de linea donde acaba*/
+  grid-column-end:3;
+}
+
+.item:nth-of-type(8){
+  /*de la linea 1 hasta 2 columnas*/
+  /* grid-column: 1 / span 2 ; */
+  /*ocoupa de la linea 1 hasta la última*/
+  grid-column: 1 / -1 ;
+}
+
+.item:nth-of-type(7){
+  grid-column: 2 /4 ;
+}
+```
+```html
+<section class="container">
+  <div class="item">item #1</div>
+  <div class="item">item #2</div>
+  <div class="item">item #3</div>
+  <div class="item">item #4</div>
+  <div class="item">item #5</div>
+  <div class="item">item #6</div>
+  <div class="item">item #7</div>
+  <div class="item">item #8</div>
+  <div class="item">item #9</div>
+  <div class="item">item #10</div>
+  <div class="item">item #11</div>
+  <div class="item">item #12</div>
+</section> 
+```
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/d550bcec3e1cfa8679950c9ae223b558/image.png)
+
 ### [11 - ]()
 -
 ### [12 - ]()
