@@ -315,7 +315,47 @@ body {
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/d550bcec3e1cfa8679950c9ae223b558/image.png)
 
 ### [11 - Definiendo el tamaño de filas dentro de un grid](https://platzi.com/clases/1229-css-grid-layout/10081-definiendo-el-tamano-de-filas-dentro-de-un-grid/)
--
+```css
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  border: 1px solid purple;
+  display: grid;
+  
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  grid-gap: 5px;
+  height: 100vh;
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+.item:nth-of-type(1){
+  grid-column:  1 / span 3;
+  grid-row: 1 / span 2;
+}
+
+.item:nth-of-type(2){
+  grid-column:  4 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.item:nth-of-type(3){
+  grid-column:  6 / span 2;
+}
+```
+```html
+<div class="item">item #1</div>
+<div class="item">item #2</div>
+<div class="item">item #3</div>
+<div class="item">item #4</div>
+<div class="item">item #5</div>
+```
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/20944864c93b5f93918215efc205a1a2/image.png)
 ### [12 - ]()
 -
 ### [13 - ]()
