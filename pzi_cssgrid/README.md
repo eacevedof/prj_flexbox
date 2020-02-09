@@ -77,11 +77,11 @@ body {
 }
 </style>
 ```
-- ![]()
+- ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/ad269457800d64e107eea8372adcd55d/image.png)
 
-
-### [05 - ]()
+### [05 - Definiendo filas](https://platzi.com/clases/1229-css-grid-layout/10075-definiendo-filas/)
 -
+
 ### [06 - ]()
 -
 ### [07 - ]()
