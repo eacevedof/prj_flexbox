@@ -4,7 +4,7 @@ php -S localhost:3000 -t leccion_03
 ```
 ## [Curso de CSS Grid layout](https://platzi.com/clases/css-grid-layout/)
 
-### [Conceptos fundamentales sobre CSS Grid Layout](https://platzi.com/clases/1229-css-grid-layout/10073-conceptos-fundamentales-sobre-css-grids/)
+### [03 - Conceptos fundamentales sobre CSS Grid Layout](https://platzi.com/clases/1229-css-grid-layout/10073-conceptos-fundamentales-sobre-css-grids/)
 -  Antes de css grid no existia ninguna estructura que nos permitiera crear cajas generales que forman el layout principal.
 - Entonces llegó flex, pero este esta diseñado para montar elementos en linea o en columna
 - Css grid layout permite recolocación de elementos de forma solapada o en forma de mosaico
@@ -32,6 +32,45 @@ php -S localhost:3000 -t leccion_03
   - **Grid area**
     - Espacio que esta rodeado por 4 grid lines
     - ![](https://trello-attachments.s3.amazonaws.com/5e4021a455d6a4209892fa16/766x434/8c0ee95f87e070975b0257460c15ea21/image.png)
-
-  
+### [04 - Definiendo columnas](https://platzi.com/clases/1229-css-grid-layout/10074-definiendo-columnas/)
+- Css grid es compatible con todos los navegadores
+- **emmet** `.item{contenido #$}*12`
+  - Crea 12 divs con `<div class="item">contenido #i</div>`
+```html
+<section class="container">
+  <div class="item">contenido #1</div>
+  <div class="item">contenido #2</div>
+  <div class="item">contenido #3</div>
+  <div class="item">contenido #4</div>
+  <div class="item">contenido #5</div>
+  <div class="item">contenido #6</div>
+  <div class="item">contenido #7</div>
+  <div class="item">contenido #8</div>
+  <div class="item">contenido #9</div>
+  <div class="item">contenido #10</div>
+  <div class="item">contenido #11</div>
+  <div class="item">contenido #12</div>
+</section>  
+```
+- 
+### [05 - ]()
+-
+### [06 - ]()
+-
+### [07 - ]()
+-
+### [08 - ]()
+-
+### [09 - ]()
+-
+### [10 - ]()
+-
+### [11 - ]()
+-
+### [12 - ]()
+-
+### [13 - ]()
+-
+### [14 - ]()
+-
 
