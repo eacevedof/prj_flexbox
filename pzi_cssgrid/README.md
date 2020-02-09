@@ -194,7 +194,7 @@ body {
 }
 ```
 - ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/c257a5a137a80b2279981cfdb9c5a75a/image.png)
-### [09 - ]()
+### [09 - Definiendo áreas de contenido](https://platzi.com/clases/1229-css-grid-layout/10079-definiendo-areas-de-contenido/)
 -
 ### [10 - ]()
 -
