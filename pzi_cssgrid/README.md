@@ -253,7 +253,7 @@ body {
 </section>  
 ```
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/38ac9146f5e5f6fd4bd1f6ce34e3b3c4/image.png)
-### [10 - ]()
+### [0 - Definiendo el tamaño de las columnas dentro de un grid](https://platzi.com/clases/1229-css-grid-layout/10080-definiendo-el-tamano-de-los-columnas-dentro-de-un-/)
 -
 ### [11 - ]()
 -
