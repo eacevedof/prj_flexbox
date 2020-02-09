@@ -592,8 +592,75 @@ body{
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/8421ed5c3701c6b6fef285e30c4adea5/image.png)
 
 ### [17 - Terminando el Layout de Instagram](https://platzi.com/clases/1229-css-grid-layout/10087-terminando-el-layout-de-instagram/)
--
-### [18 - ]()
+- Uso de mediaquery para ipad
+```css
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+/*section.post-list*/
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(100px,293px));
+  justify-content: center;
+  grid-gap: 28px;
+}
+
+/*a.post*/
+.post {
+  cursor: pointer;
+  position: relative;
+  /*el ancla por defecto es inline, para que haga caso al width hay q cambiar a blok*/
+  display: block;
+}
+.post-image {
+  margin:0;
+
+}
+.post-image img {
+  width: 100%;
+  vertical-align: top;
+
+}
+.post-overlay {
+  background: rgba(0,0,0,.4);
+  position: absolute;
+  left:0;
+  right: 0;
+  bottom: 0;
+  top:0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.post:hover .post-overlay {
+  display: flex;
+}
+
+/*son spans*/
+.post-likes,
+.post-comments {
+  width: 80px;
+  margin: 5px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+/*medidas de ipad*/
+@media screen and (max-width: with 768px){
+  .post-list {
+    grid-gap: 3px;
+  }
+}
+```
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/fe368e02dae79757dfe9fcde6527047e/image.png)
+
+### [18 - Layout Masonry (Pinterest)](https://platzi.com/clases/1229-css-grid-layout/10089-layout-masonry-pinterest/)
 -
 ### [19 - ]()
 -
