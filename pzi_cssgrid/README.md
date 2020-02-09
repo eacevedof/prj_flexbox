@@ -497,7 +497,26 @@ body {
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/23d2a06e07e96ad1963113a961934473/image.png)
 
 ### [15 - Alineación de filas y columnas](https://platzi.com/clases/1229-css-grid-layout/10085-alineacion-de-filas-y-columnas/)
-- 
+- alineacion vertical y horizontal
+```css
+.container {
+  border: 1px solid purple;
+  display: grid;
+  grid-gap: 5px;
+  height: 100vh;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(4, 100px);
+  /* justify-content: start end center stretch space-around space-between space-evenly; */
+  justify-content: center; /*eje x*/
+  align-content: center; /* eje y*/
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+```
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/7e04d09760e26920d867d1884e459500/image.png)
 
 ### [16 - ]()
 -
