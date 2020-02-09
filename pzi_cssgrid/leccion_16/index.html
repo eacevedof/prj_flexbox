@@ -5,49 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>16 - Layout de Instagram</title>
 <style>
-body {
+body{
+  margin:0;
   font-family: Arial, Helvetica, sans-serif;
+
 }
-.container {
-  border: 1px solid purple;
-  display: grid;
-  grid-gap: 5px;
-  height: 100vh;
-  grid-template-columns: repeat(3, 200px);
-  grid-template-rows: repeat(4, 100px);
-  /* justify-content: start end center stretch space-around space-between space-evenly; */
-  justify-content: center; /*eje x*/
-  align-content: center; /* eje y*/
-  /* justify-items: start end center stretch; */
-  /* justify-items: center; */
-  /* align-items: start end center stretch; */
-  /* align-items: start end center stretch; */
+/*a.post*/
+.post {
+  cursor: pointer;
+  position: relative;
+  width: 200px;
+  /*el ancla por defecto es inline, para que haga caso al width hay q cambiar a blok*/
+  display: block;
 }
-.item {
-  background: lightblue;
-  padding: 10px;
-  border: 1px solid red;
+.post-image {
+  margin:0;
+
 }
-.item:nth-of-type(5){
-  /* align-self:start;
-  justify-self:start; */
+.post-image img {
+  width: 100%;
+  vertical-align: top;
+
+}
+.post-overlay {
+  background: rgba(0,0,0,.4);
+  position: absolute;
+  left:0;
+  right: 0;
+  bottom: 0;
+  top:0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.post:hover .post-overlay {
+  display: flex;
+}
+
+/*son spans*/
+.post-likes,
+.post-comments {
+  width: 80px;
+  margin: 5px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
 }
 </style>
 </head>
 <body>
-  <section class="container">
-    <div class="item">item #1</div>
-    <div class="item">item #2</div>
-    <div class="item">item #3</div>
-    <div class="item">item #4</div>
-    <div class="item">item #5</div>
-    <div class="item">item #6</div>
-    <div class="item">item #7</div>
-    <div class="item">item #8</div>
-    <div class="item">item #9</div>
-    <div class="item">item #10</div>
-    <div class="item">item #11</div>
-    <div class="item">item #12</div>
-  </section>  
+  <section class="post-list">
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="instagram/compu.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+          <span class="post-likes">150</span>
+          <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+  </section>
 </body>
 </html>

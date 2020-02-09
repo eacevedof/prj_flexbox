@@ -519,7 +519,76 @@ body {
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/7e04d09760e26920d867d1884e459500/image.png)
 
 ### [16 - Layout de Instagram](https://platzi.com/clases/1229-css-grid-layout/10086-layout-de-instagram/)
-- 
+```html
+<style>
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+/*a.post*/
+.post {
+  cursor: pointer;
+  position: relative;
+  width: 200px;
+  /*el ancla por defecto es inline, para que haga caso al width hay q cambiar a blok*/
+  display: block;
+}
+.post-image {
+  margin:0;
+
+}
+.post-image img {
+  width: 100%;
+  vertical-align: top;
+
+}
+.post-overlay {
+  background: rgba(0,0,0,.4);
+  position: absolute;
+  left:0;
+  right: 0;
+  bottom: 0;
+  top:0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.post:hover .post-overlay {
+  display: flex;
+}
+
+/*son spans*/
+.post-likes,
+.post-comments {
+  width: 80px;
+  margin: 5px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+</style>
+</head>
+<body>
+  <section class="post-list">
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="instagram/compu.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+          <span class="post-likes">150</span>
+          <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+  </section>
+</body>
+</html>
+``` 
 
 ### [17 - ]()
 -
