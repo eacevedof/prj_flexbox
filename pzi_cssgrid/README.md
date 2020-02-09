@@ -97,7 +97,35 @@ body {
 
 ### [06 - Grids identados y tipos de displays](https://platzi.com/clases/1229-css-grid-layout/10076-grids-identados-y-tipos-de-displays/)
 - ![](https://trello-attachments.s3.amazonaws.com/5e4021a455d6a4209892fa16/1121x347/86609377db2dcbd1cbe181cd7b0cd01e/image.png)
+```css
+.container {
+  display: grid;
+  grid-template-columns: 25% 200px 25%;
+  grid-template-rows: 300px 150px;
+  /*template a secas substituye las otras*/
+  grid-template: 300px 100px 100px / 50% 200px 100px;
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
 
+/*nth: toma el cuarto elemento de tipo item*/
+.item:nth-of-type(4){
+  background: blue;
+  overflow: auto;
+  /*display: subgrid;  en un futuro existira y nos ahorramos repetir grid*/
+  /*display: inline-grid;*/
+  display:grid;
+  grid-template: 50px 50px 50px / 200px 200px 200px;
+}
+
+.item .item {
+  background: yellow;
+}
+```
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/162cff07357debc3716d87ee148bf43e/image.png)
 
 ### [07 - ]()
 -
