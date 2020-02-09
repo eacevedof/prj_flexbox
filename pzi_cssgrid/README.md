@@ -357,7 +357,41 @@ body {
 ```
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/20944864c93b5f93918215efc205a1a2/image.png)
 ### [12 - Definiendo el nombre de lineas](https://platzi.com/clases/1229-css-grid-layout/10082-definiendo-el-nombre-de-lineas/)
--
+- renombrar los ids de lineas para que tenga valor semantico al ponerlas como limites
+```css
+.container {
+  border: 1px solid purple;
+  display: grid;
+  
+  grid-template-columns: [ci] 1fr [c1] 1fr [c2] 1fr [c3] 1fr [dest-end] 1fr [c5] 1fr [dest2-end] 1fr [c7] 1fr [cf];
+  grid-template-rows: [fi] 200px [f2] 200px [ff];
+  grid-gap: 5px;
+  height: 100vh;
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+/*nth: toma el cuarto elemento de tipo item*/
+.item:nth-of-type(1){
+  grid-column: ci / dest-end;
+  grid-row: fi / ff
+
+}
+
+.item:nth-of-type(2){
+  grid-column: dest-end / dest2-end;
+  grid-row: fi / ff
+}
+
+.item:nth-of-type(3){
+  grid-column: dest2-end / cf; 
+
+}
+```
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/01e5d34174fa5628a69e45f9bf1770bc/image.png)
 
 ### [13 - ]()
 -
