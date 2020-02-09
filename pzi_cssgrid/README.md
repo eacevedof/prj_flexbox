@@ -160,10 +160,9 @@ body {
 ```
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/2fa26bb13ab1df845db061c2598d39aa/image.png)
 
+### [08 - Repetidores, unidades de medida y funciones](https://platzi.com/clases/1229-css-grid-layout/10078-repetidores-unidades-de-medida-y-funciones/)
+- 
 
-
-### [08 - ]()
--
 ### [09 - ]()
 -
 ### [10 - ]()
