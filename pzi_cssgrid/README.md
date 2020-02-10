@@ -661,7 +661,88 @@ body{
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/fe368e02dae79757dfe9fcde6527047e/image.png)
 
 ### [18 - Layout Masonry (Pinterest)](https://platzi.com/clases/1229-css-grid-layout/10089-layout-masonry-pinterest/)
--
+- ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/5b1fb01c7cd15fdeffd1d6eb707c9b80/image.png)
+- 
+```html
+<style>
+.container {
+  display: grid;
+  /*
+  auto-fill hace que sea responsive, 
+  permite que se agregen a lo ancho las columnas que quepan
+  */
+  grid-template-columns: repeat(auto-fill,250px);
+  grid-gap: 5px;
+  justify-content: center;
+}
+
+.item {
+  border-radius: 5px;
+  padding: 10px;
+  background: yellowgreen;
+}
+.item img {
+  max-width: 100%;
+}
+
+.level-1 {
+  /*le indica al div que ocupe 3 filas*/
+  grid-row-end: span 3;
+}
+
+.level-2 {
+  /*ocupa 2*/
+  grid-row-end: span 2;
+}
+
+.level-3 {
+  grid-row-end: span 1;
+}
+</style>
+<div class="container">
+  <div class="item level-1">
+    <img src="pinterest/landing.jpg" alt="">
+  </div>
+  <div class="item level-2">
+    <img src="pinterest/tshirt.webp" alt="">
+  </div>
+  <div class="item level-3">
+    <img src="pinterest/house.jpg" alt="">
+  </div>
+
+  <div class="item level-1">
+    <img src="pinterest/landing.jpg" alt="">
+  </div>
+  <div class="item level-2">
+    <img src="pinterest/tshirt.webp" alt="">
+  </div>
+  <div class="item level-3">
+    <img src="pinterest/house.jpg" alt="">
+  </div>
+  
+  <div class="item level-1">
+    <img src="pinterest/landing.jpg" alt="">
+  </div>
+  <div class="item level-2">
+    <img src="pinterest/tshirt.webp" alt="">
+  </div>
+  <div class="item level-3">
+    <img src="pinterest/house.jpg" alt="">
+  </div>
+  
+  <div class="item level-1">
+    <img src="pinterest/landing.jpg" alt="">
+  </div>
+  <div class="item level-2">
+    <img src="pinterest/tshirt.webp" alt="">
+  </div>
+  <div class="item level-3">
+    <img src="pinterest/house.jpg" alt="">
+  </div>    
+</div>
+```
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/8e0300c415ebaa013850bc76f7f122ed/image.png)
+
 ### [19 - ]()
 -
 ### [20 - ]()

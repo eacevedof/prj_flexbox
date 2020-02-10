@@ -5,172 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>18 - Layout Masonry (Pinterest)</title>
 <style>
-body{
-  margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-
-}
-/*section.post-list*/
-.post-list {
+.container {
   display: grid;
-  grid-template-columns: repeat(3,minmax(100px,293px));
+  grid-template-columns: repeat(auto-fill,250px);
+  grid-gap: 5px;
   justify-content: center;
-  grid-gap: 28px;
 }
 
-/*a.post*/
-.post {
-  cursor: pointer;
-  position: relative;
-  /*el ancla por defecto es inline, para que haga caso al width hay q cambiar a blok*/
-  display: block;
+.item {
+  border-radius: 5px;
+  padding: 10px;
+  background: yellowgreen;
 }
-.post-image {
-  margin:0;
-
-}
-.post-image img {
-  width: 100%;
-  vertical-align: top;
-
-}
-.post-overlay {
-  background: rgba(0,0,0,.4);
-  position: absolute;
-  left:0;
-  right: 0;
-  bottom: 0;
-  top:0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
+.item img {
+  max-width: 100%;
 }
 
-.post:hover .post-overlay {
-  display: flex;
+.level-1 {
+  grid-row-end: span 3;
 }
 
-/*son spans*/
-.post-likes,
-.post-comments {
-  width: 80px;
-  margin: 5px;
-  font-weight: bold;
-  text-align: center;
-  display: inline-block;
+.level-2 {
+  grid-row-end: span 2;
 }
 
-/*medidas de ipad*/
-@media screen and (max-width: with 768px){
-  .post-list {
-    grid-gap: 3px;
-  }
+.level-3 {
+  grid-row-end: span 1;
 }
 </style>
 </head>
 <body>
-  <section class="post-list">
-    <a href="" class="post">
-      <figure class="post-image">
-        <img src="instagram/compu.jpg" alt="">
-      </figure>
-      <span class="post-overlay">
-        <p>
-          <span class="post-likes">150</span>
-          <span class="post-comments">10</span>
-        </p>
-      </span>
-    </a>
-    <a href="" class="post">
-      <figure class="post-image">
-        <img src="instagram/compu2.jpg" alt="">
-      </figure>
-      <span class="post-overlay">
-        <p>
-          <span class="post-likes">150</span>
-          <span class="post-comments">10</span>
-        </p>
-      </span>
-    </a>
-    <a href="" class="post">
-      <figure class="post-image">
-        <img src="instagram/compu3.jpg" alt="">
-      </figure>
-      <span class="post-overlay">
-        <p>
-          <span class="post-likes">150</span>
-          <span class="post-comments">10</span>
-        </p>
-      </span>
-    </a>
-    <a href="" class="post">
-      <figure class="post-image">
-        <img src="instagram/compu.jpg" alt="">
-      </figure>
-      <span class="post-overlay">
-        <p>
-          <span class="post-likes">150</span>
-          <span class="post-comments">10</span>
-        </p>
-      </span>
-    </a>
-    <a href="" class="post">
-      <figure class="post-image">
-        <img src="instagram/compu2.jpg" alt="">
-      </figure>
-      <span class="post-overlay">
-        <p>
-          <span class="post-likes">150</span>
-          <span class="post-comments">10</span>
-        </p>
-      </span>
-    </a>
-    <a href="" class="post">
-      <figure class="post-image">
-        <img src="instagram/compu3.jpg" alt="">
-      </figure>
-      <span class="post-overlay">
-        <p>
-          <span class="post-likes">150</span>
-          <span class="post-comments">10</span>
-        </p>
-      </span>
-    </a>    
-    <a href="" class="post">
-      <figure class="post-image">
-        <img src="instagram/compu.jpg" alt="">
-      </figure>
-      <span class="post-overlay">
-        <p>
-          <span class="post-likes">150</span>
-          <span class="post-comments">10</span>
-        </p>
-      </span>
-    </a>
-    <a href="" class="post">
-      <figure class="post-image">
-        <img src="instagram/compu2.jpg" alt="">
-      </figure>
-      <span class="post-overlay">
-        <p>
-          <span class="post-likes">150</span>
-          <span class="post-comments">10</span>
-        </p>
-      </span>
-    </a>
-    <a href="" class="post">
-      <figure class="post-image">
-        <img src="instagram/compu3.jpg" alt="">
-      </figure>
-      <span class="post-overlay">
-        <p>
-          <span class="post-likes">150</span>
-          <span class="post-comments">10</span>
-        </p>
-      </span>
-    </a>    
-  </section>
+  <div class="container">
+    <div class="item level-1">
+      <img src="pinterest/landing.jpg" alt="">
+    </div>
+    <div class="item level-2">
+      <img src="pinterest/tshirt.webp" alt="">
+    </div>
+    <div class="item level-3">
+      <img src="pinterest/house.jpg" alt="">
+    </div>
+
+    <div class="item level-1">
+      <img src="pinterest/landing.jpg" alt="">
+    </div>
+    <div class="item level-2">
+      <img src="pinterest/tshirt.webp" alt="">
+    </div>
+    <div class="item level-3">
+      <img src="pinterest/house.jpg" alt="">
+    </div>
+    
+    <div class="item level-1">
+      <img src="pinterest/landing.jpg" alt="">
+    </div>
+    <div class="item level-2">
+      <img src="pinterest/tshirt.webp" alt="">
+    </div>
+    <div class="item level-3">
+      <img src="pinterest/house.jpg" alt="">
+    </div>
+    
+    <div class="item level-1">
+      <img src="pinterest/landing.jpg" alt="">
+    </div>
+    <div class="item level-2">
+      <img src="pinterest/tshirt.webp" alt="">
+    </div>
+    <div class="item level-3">
+      <img src="pinterest/house.jpg" alt="">
+    </div>    
+  </div>
 </body>
 </html>
