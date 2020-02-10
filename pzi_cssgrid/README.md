@@ -833,8 +833,9 @@ body {
 </div>
 ```
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/85d2a8c00af669699e8345c38a5d18dd/image.png)
-### [20 - ]()
--
+### [20 - Terminando el landing de los cursos de Platzi](https://platzi.com/clases/1229-css-grid-layout/10091-terminando-el-landing-de-los-cursos-de-platzi/)
+- 
+
 ### [21 - ]()
 -
 ### [22 - ]()
