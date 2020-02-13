@@ -985,6 +985,7 @@ p {
   </div>
 </div>
 ```
+
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e4021a455d6a4209892fa16/bb9feb5d88abdd7bbaf43de3d4d32643/image.png)
 
 ### [21 - Desafio](https://platzi.com/clases/1229-css-grid-layout/10092-desafio3419/)
