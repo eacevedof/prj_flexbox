@@ -37,79 +37,79 @@
 - 
 ### [18. Creando un Menú con Iconos (Pt 2 de 2) 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269704#overview)
 - 
-### [19. Creando un Dropdown Menu 6 min]()
+### [19. Creando un Dropdown Menu 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269708#overview)
 - 
-### [20. Creando un Menú de Redes Sociales 6 min]()
+### [20. Creando un Menú de Redes Sociales 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269720#overview)
 - 
-### [21. Creando un Menú de Redes Sociales y Dropdown 3 min]()
+### [21. Creando un Menú de Redes Sociales y Dropdown 3 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269722#overview)
 - 
 ### Sección 5: PROYECTO: Sitio Web de Cursos 0 / 16|1 h 24 min
-### [22. ¿Porque usar Autoprefixr? 3 min]()
+### [22. ¿Porque usar Autoprefixr? 3 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269726#overview)
 - 
-### [23. Instalando Dependencias 7 min]()
+### [23. Instalando Dependencias 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15435242#overview)
 - 
-### [24. Compilando SASS con Gulp 7 min]()
+### [24. Compilando SASS con Gulp 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15435246#overview)
 - 
-### [25. Agregando un watch 5 min]()
+### [25. Agregando un watch 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15435248#overview)
 - 
-### [26. Comenzando los estilos del Proyecto 4 min]()
+### [26. Comenzando los estilos del Proyecto 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10270136#overview)
 - 
-### [27. Estilos al carrito de compras con SASS 7 min]()
+### [27. Estilos al carrito de compras con SASS 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10270138#overview)
 - 
-### [28. Agregando una fuente de Google Fonts 4 min]()
+### [28. Agregando una fuente de Google Fonts 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10270140#overview)
 - 
-### [29. Creando un Mixin 4 min]()
+### [29. Creando un Mixin 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10270142#overview)
 - 
-### [30. Creando otros mixins útiles 2 min]()
+### [30. Creando otros mixins útiles 2 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10270144#overview)
 - 
-### [31. Creando la imagen principal y buscador 8 min]()
+### [31. Creando la imagen principal y buscador 8 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10270146#overview)
 - 
-### [32. Creando mixins para media queries 4 min]()
+### [32. Creando mixins para media queries 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10270150#overview)
 - 
-### [33. Creando la barra principal 8 min]()
+### [33. Creando la barra principal 8 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10270166#overview)
 - 
-### [34. Creando la sección de los cursos 5 min]()
+### [34. Creando la sección de los cursos 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10276388#overview)
 - 
-### [35. Finalizando la sección de los cursos 6 min]()
+### [35. Finalizando la sección de los cursos 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10276392#overview)
 - 
-### [36. Creando el footer 2 min]()
+### [36. Creando el footer 2 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10276394#overview)
 - 
-### [37. Creando los menús del footer 7 min]()
+### [37. Creando los menús del footer 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10276400#overview)
 - 
 ### Sección 6: PROYECTO: Login de Netflix con SASS, Gulp y Flexbox 0 / 17|1 h 36 min
-### [38. Primeros pasos con el Proyecto 6 min]()
+### [38. Primeros pasos con el Proyecto 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15433902#overview)
 - 
-### [39. Compilando SASS con Gulp 6 min]()
+### [39. Compilando SASS con Gulp 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15433910#overview)
 - 
-### [40. Agregando un watch 5 min]()
+### [40. Agregando un watch 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15433916#overview)
 - 
-### [41. Creando e importando las Variables 4 min]()
+### [41. Creando e importando las Variables 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15433940#overview)
 - 
-### [42. Creando e Importando Mixins 6 min]()
+### [42. Creando e Importando Mixins 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15433942#overview)
 - 
-### [43. Escribiendo el HTML del login 7 min]()
+### [43. Escribiendo el HTML del login 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15434046#overview)
 - 
-### [44. CSS al Body 5 min]()
+### [44. CSS al Body 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15434052#overview)
 - 
-### [45. CSS al Logo 2 min]()
+### [45. CSS al Logo 2 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15434054#overview)
 - 
-### [46. Primeros pasos con el formulario 4 min]()
+### [46. Primeros pasos con el formulario 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15434092#overview)
 - 
-### [47. CSS a los inputs 4 min]()
+### [47. CSS a los inputs 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15434094#overview)
 - 
-### [48. Animando el Label cuando vamos a escribir en el formulario 3 min]()
+### [48. Animando el Label cuando vamos a escribir en el formulario 3 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15434134#overview)
 - 
-### [49. Creando el botón de Iniciar Sesión 7 min]()
+### [49. Creando el botón de Iniciar Sesión 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15434188#overview)
 - 
-### [50. Finalizando el formulario 5 min]()
+### [50. Finalizando el formulario 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15434230#overview)
 - 
-### [51. CSS al Footer 9 min]()
+### [51. CSS al Footer 9 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15434272#overview)
 - 
-### [52. Validación del Formulario 6 min]()
+### [52. Validación del Formulario 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15434276#overview)
 - 
-### [53. Agregando clases y mensajes de error 11 min]()
+### [53. Agregando clases y mensajes de error 11 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15434284#overview)
 - 
-### [54. Agregando un botón de ocultar / mostrar en el password 7 min]()
+### [54. Agregando un botón de ocultar / mostrar en el password 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/15434290#overview)
 - 
 ### Sección 7: PROYECTO: Diseño de un Blog 0 / 8|44 min
 ### [55. Arrancando el Proyecto 4 min]()
