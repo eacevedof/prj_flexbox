@@ -1,45 +1,41 @@
 ## [CSS Grid y Flexbox la guia definitiva](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/)
 
 ### Sección 2: Introducción y básicos de Flexbox 10 / 11|1 h 8 min
-### [2. ¿Qué es Flexbox? 4 min]()
+### [2. ¿Qué es Flexbox? 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268178#overview)
 - 
-### [3. El Contenedor Flex o Flex Container 6 min]()
+### [3. El Contenedor Flex o Flex Container 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10267830#overview)
 - 
-### [4. Flex Direction 5 min]()
+### [4. Flex Direction 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10277196#overview)
 - 
-### [5. Flex Wrap 5 min]()
+### [5. Flex Wrap 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10267834#overview)
 - 
-### [6. Flex Flow y Order 6 min]()
+### [6. Flex Flow y Order 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268006#overview)
 - 
-### [7. Flex Grow, Flex Shrink, Flex Basis y el Shorthand Flex 9 min]()
+### [7. Flex Grow, Flex Shrink, Flex Basis y el Shorthand Flex 9 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268018#overview)
 - 
-### [8. Flex Grow y flex a fondo 12 min]()
+### [8. Flex Grow y flex a fondo 12 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/11558638#overview)
 - 
-### [9. Alineando con Flexbox 9 min]()
+### [9. Alineando con Flexbox 9 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268028#overview)
 - 
-### [10. Poniendo todo en práctica (Video 1 de 3) 5 min]()
+### [10. Poniendo todo en práctica (Video 1 de 3) 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268036#overview)
 - 
-### [11. Poniendo todo en práctica (Video 2 de 3) 5 min]()
+### [11. Poniendo todo en práctica (Video 2 de 3) 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268060#overview)
 - 
-### [12. Poniendo todo en práctica (Video 3 de 3) 4 min]()
+### [12. Poniendo todo en práctica (Video 3 de 3) 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268062#overview)
 - 
 ### Sección 3: PROYECTO: Diseño de tipo Cards en Flexbox 0 / 3|16 min
-### [13. Arrancando el Proyecto 5 min]()
+### [13. Arrancando el Proyecto 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268074#overview)
 - 
-### [14. Agregando Media Queries a los Cards 4 min]()
+### [14. Agregando Media Queries a los Cards 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269018#overview)
 - 
-### [15. Estilos a los cards 7 min]()
+### [15. Estilos a los cards 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269652#overview)
 - 
 ### Sección 4: Creando Menús de Navegación con Flexbox 0 / 6|35 min
-### [16. Creando un Menú Sencillo 6 min]()
+### [16. Creando un Menú Sencillo 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269656#overview)
 - 
-### [17. Creando un Menú con Iconos (Pt 1 de]()
+### [17. Creando un Menú con Iconos (Pt 1 de 2) 7 min]](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269668#overview)
 - 
-### [2) 7 min]()
-- 
-### [18. Creando un Menú con Iconos (Pt 2 de]()
-- 
-### [2) 7 min]()
+### [18. Creando un Menú con Iconos (Pt 2 de 2) 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269704#overview)
 - 
 ### [19. Creando un Dropdown Menu 6 min]()
 - 
