@@ -255,7 +255,38 @@ con el mediaquery le indicamos que si es mayor a 768 (hay espacio para 2 cols) e
   }
 }
 ```
+
 ```html
+  <div class="contenedor">
+    
+    <main class="nosotros">
+      <h2>Sobre nosotros</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Sunt amet sint et voluptatem ad eum ipsum asperiores aspernatur 
+        nulla tenetur, aliquid magnam dignissimos aliquam sequi quae facilis 
+        exercitationem porro! Asperiores?
+      </p>
+
+      <h3>Servicios</h3>
+      <div class="servicios">
+        <div class="servicio">
+          <h3>Servicio 1</h3>
+        </div>
+        <div class="servicio doble">
+          <h3>Servicio 2</h3>
+        </div>
+        <div class="servicio">
+          <h3>Servicio 3</h3>
+        </div>  
+      </div>
+      
+    </main>
+
+    <aside class="sidebar">
+      <h2>Contenido Lateral</h2>
+    </aside>
+  </div>
 ```
 - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/1018x601/ac8edc237cba876bb5dd7c6d3e29a53a/image.png)
 - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/473x788/5129b328b13b557f6fbca53cc60fcde9/image.png)
