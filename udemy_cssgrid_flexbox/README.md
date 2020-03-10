@@ -416,7 +416,54 @@ nav {
 - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/477x198/9ba24ae0c0da2399a231eabf2a1ef5dd/image.png)
 
 ### [11. Poniendo todo en práctica (Video 2 de 3) 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268060#overview)
-- 
+```css
+/*
+<main class="contenedor-flex">
+  <principal>
+  <aside>
+*/
+.contenedor-flex {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+@media screen and (min-width:768px) { 
+  .contenedor-flex {
+    flex-direction: row; 
+  }
+}
+
+.principal {
+  order: 2; /*la caja de los servicios por defecto al final*/
+}
+aside {
+
+}
+
+aside {
+  background-color: #03A9F4;
+  margin-bottom: 1rem;
+}
+
+
+@media screen and (min-width:768px) {
+  .principal {
+    /*no quiero que crezca pero si shrink con un min de 60%*/
+    flex:0 1 60%;
+    margin-right: 20px;
+    order: unset; /*la caja de los servicios si cabe al prinpicpio*/
+  }
+  aside {
+    /*el aside crecerá (flex grow) y tomará el espacio restante*/
+    flex:1;
+  }
+}
+```
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/768x257/bce83f067bf532ceb5a76bfe6e9bff20/image.png)
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/451x337/cf77a739465d61dee102c1db8c39dbb9/image.png)
+
 ### [12. Poniendo todo en práctica (Video 3 de 3) 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268062#overview)
 - 
 ### Sección 3: PROYECTO: Diseño de tipo Cards en Flexbox 0 / 3|16 min

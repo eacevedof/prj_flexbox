@@ -59,33 +59,47 @@ h2 {
   color:white;
 }
 
+/*
+<main class="contenedor-flex">
+  <principal>
+  <aside>
+*/
 .contenedor-flex {
   margin-top: 20px;
-  /* Flex aqui*/
+  display: flex;
+  flex-direction: column;
+  
 }
+
 @media screen and (min-width:768px) { 
   .contenedor-flex {
-     /* Flex aqui*/
+    flex-direction: row; 
   }
 }
 
 .principal {
-  /* Flex aqui*/
-
+  order: 2; /*la caja de los servicios por defecto al final*/
 }
 aside {
-  /* flex aqui*/
+
 }
 
 aside {
   background-color: #03A9F4;
+  margin-bottom: 1rem;
 }
+
+
 @media screen and (min-width:768px) {
   .principal {
-      /* Flex aqui*/
+    /*no quiero que crezca pero si shrink con un min de 60%*/
+    flex:0 1 60%;
+    margin-right: 20px;
+    order: unset; /*la caja de los servicios si cabe al prinpicpio*/
   }
   aside {
-      /* Flex aqui*/
+    /*el aside crecerá (flex grow) y tomará el espacio restante*/
+    flex:1;
   }
 }
 .servicios {
