@@ -4,12 +4,33 @@ body {
   background: #ff9966;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.header-sitio {
+  background-color: #03A9F4;
+  padding:0 20px;
+  /* Flex aqui*/
+}
+@media screen and (min-width:768px) {
+  .header-sitio {
+      /* Flex aqui*/
+  }
+}
+.header-sitio h1 {
+  color:white;
+}
 
+nav {
+  /* Flex aqui*/
+}
+nav a {
+  color: white; 
+  font-family: 'IBM Plex Serif', serif;
+  text-decoration: none;
 }
 
 .contenedor {
   background-color: white;
-  height: calc( 100vh - 20px );
+  min-height: calc( 100vh - 20px );
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px 30px 0 30px;
@@ -23,45 +44,66 @@ h2 {
 }
 
 .contenedor-flex {
-  /* display:inline-flex; */
-  display: flex;
-  border: 3px solid black;
-
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
-  flex-flow: row wrap;
-  /*
-  indica que se renderizarán los items de izquierda a derecha
-  es equivalente a float-left y flex-end a float-right, center sería margin:0 auto;
-  */
-  justify-content: flex-start;
-  justify-content: center; /*centra*/
-  justify-content: space-around; /*centra crea margin entre los items*/
-  justify-content: space-between; /*usado en bootstrap y foundation*/
-
-  height: 400px;
-  align-items: flex-start;
-  align-items: flex-end;
-  align-items: baseline;
-  align-items: center;
+  margin-top: 20px;
+  /* Flex aqui*/
+}
+@media screen and (min-width:768px) { 
+  .contenedor-flex {
+     /* Flex aqui*/
+  }
 }
 
-.elemento-flex {
-  padding: 10px;
+.principal {
+  /* Flex aqui*/
+
+}
+aside {
+  /* flex aqui*/
+}
+
+aside {
+  background-color: #03A9F4;
+}
+@media screen and (min-width:768px) {
+  .principal {
+      /* Flex aqui*/
+  }
+  aside {
+      /* Flex aqui*/
+  }
+}
+.servicios {
+  /* Flex aqui*/
+}
+.servicios .servicio {
+  /* Flex aqui*/
+}
+@media screen and (min-width:768px) {
+  .servicios .servicio {
+      /* Flex aqui*/
+  }
+}
+
+.servicio {
+  padding: 5px;
   background-color: #E53935;
-  
-}
-.elemento-flex:nth-child(1) {
-  background-color: red;
-  align-self: flex-start;
 }
 
-.elemento-flex:nth-child(2) {
+
+.servicio:nth-child(2) {
   background-color: #8E24AA;
 }
 
-.elemento-flex:nth-child(3) {
+.servicio:nth-child(3) {
   background-color: #3F51B5;
-  align-self: flex-end;
-  align-self: stretch;
+}
+
+footer {
+  height: 100px;
+  background-color: #8E24AA;
+  margin-top: 20px;
+  /* Flex aqui*/
+}
+footer p {
+  color: white;
 }

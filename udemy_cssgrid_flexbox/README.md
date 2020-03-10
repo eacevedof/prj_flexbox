@@ -367,6 +367,7 @@ con el mediaquery le indicamos que si es mayor a 768 (hay espacio para 2 cols) e
 
 ### [10. Poniendo todo en práctica (Video 1 de 3) 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268036#overview)
 - 
+
 ### [11. Poniendo todo en práctica (Video 2 de 3) 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268060#overview)
 - 
 ### [12. Poniendo todo en práctica (Video 3 de 3) 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268062#overview)
