@@ -102,15 +102,27 @@ aside {
     flex:1;
   }
 }
+
+/*
+<div class="servicios">
+  <servicio n>
+*/
 .servicios {
-  /* Flex aqui*/
+  display: flex;
+  flex-direction: column;
 }
+/*<servicio n>*/
 .servicios .servicio {
-  /* Flex aqui*/
+  
 }
 @media screen and (min-width:768px) {
+  .servicios {
+    display: flex;
+    flex-direction: row;
+  }
+
   .servicios .servicio {
-      /* Flex aqui*/
+      flex:1 /*hace que ocupe toda la fila*/
   }
 }
 
@@ -132,8 +144,11 @@ footer {
   height: 100px;
   background-color: #8E24AA;
   margin-top: 20px;
-  /* Flex aqui*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer p {
   color: white;
+  
 }

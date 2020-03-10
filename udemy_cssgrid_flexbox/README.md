@@ -465,7 +465,60 @@ aside {
 - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/451x337/cf77a739465d61dee102c1db8c39dbb9/image.png)
 
 ### [12. Poniendo todo en práctica (Video 3 de 3) 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268062#overview)
-- 
+```css
+/*
+<div class="servicios">
+  <servicio n>
+*/
+.servicios {
+  display: flex;
+  flex-direction: column;
+}
+/*<servicio n>*/
+.servicios .servicio {
+  
+}
+@media screen and (min-width:768px) {
+  .servicios {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .servicios .servicio {
+      flex:1 /*hace que ocupe toda la fila*/
+  }
+}
+
+.servicio {
+  padding: 5px;
+  background-color: #E53935;
+}
+
+
+.servicio:nth-child(2) {
+  background-color: #8E24AA;
+}
+
+.servicio:nth-child(3) {
+  background-color: #3F51B5;
+}
+
+footer {
+  height: 100px;
+  background-color: #8E24AA;
+  margin-top: 20px;
+  display: flex;
+  /*alineacion vertical y horizontal del parrafo*/
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  color: white;
+}
+```
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/827x399/5ea56b1920a002071e540124e2c5a403/image.png)
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/461x680/f61286c8b2b41895761f36d996b98edc/image.png)
+
 ### Sección 3: PROYECTO: Diseño de tipo Cards en Flexbox 0 / 3|16 min
 ### [13. Arrancando el Proyecto 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268074#overview)
 - 
