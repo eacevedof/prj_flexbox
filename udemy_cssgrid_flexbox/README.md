@@ -126,7 +126,46 @@ h2 {
 - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/469x553/3233b07429c90c7259d0ea62d8c1605f/image.png)
 
 ### [6. Flex Flow y Order 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268006#overview)
-- 
+- Se puede sobrescribir el orden por defecto de los items
+- Para esto se usa en la css del item la propiedad order:
+```css
+.elemento-flex{
+  padding: 10px;
+}
+
+/*todos los elementos con padding 10 y color rojo*/
+.elemento-flex:nth-child(1) {
+  background-color: #E53935;
+}
+
+/*al segundo elemento se le cambia el color*/
+.elemento-flex:nth-child(2) {
+  order:1;
+  background-color: #8E24AA;
+}
+
+/*solo cambio de color*/
+.elemento-flex:nth-child(3) {
+  order:2;
+  background-color: #3F51B5;
+}
+
+/*media query
+si el ancho visible del body es >=768 el servicio 3 pasa a ser el primero
+*/
+@media screen and (min-width:768px){
+  .elemento-flex:nth-child(3) {
+    order:-1;
+    background-color: green;
+  }
+  .elemento-flex:nth-child(2) {
+    order:3;
+    background-color: rgb(95, 69, 243);
+  }  
+}
+```
+![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/740x477/3d4be0efa28c3e6c819af7093a0685e1/image.png)
+
 ### [7. Flex Grow, Flex Shrink, Flex Basis y el Shorthand Flex 9 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268018#overview)
 - 
 ### [8. Flex Grow y flex a fondo 12 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/11558638#overview)

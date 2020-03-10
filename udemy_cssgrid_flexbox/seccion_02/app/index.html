@@ -27,48 +27,24 @@
       <div class="elemento-flex elemento-3">
           <h2>Servicio 3</h2>
       </div>
-      <div class="elemento-flex elemento-2">
-        <h2>Servicio 4</h2>
-      </div>
-      <div class="elemento-flex elemento-3">
-        <h2>Servicio 5</h2>
-      </div>  
-      <div class="elemento-flex elemento-1">
-          <h2>Servicio 1</h2>
-      </div>
-      <div class="elemento-flex elemento-2">
-          <h2>Servicio 2</h2>
-      </div>
-      <div class="elemento-flex elemento-3">
-          <h2>Servicio 3</h2>
-      </div>
-      <div class="elemento-flex elemento-2">
-        <h2>Servicio 4</h2>
-      </div>
-      <div class="elemento-flex elemento-3">
-        <h2>Servicio 5</h2>
-      </div>  
-      <div class="elemento-flex elemento-1">
-          <h2>Servicio 1</h2>
-      </div>
-      <div class="elemento-flex elemento-2">
-          <h2>Servicio 2</h2>
-      </div>
-      <div class="elemento-flex elemento-3">
-          <h2>Servicio 3</h2>
-      </div>
-      <div class="elemento-flex elemento-2">
-        <h2>Servicio 4</h2>
-      </div>
-      <div class="elemento-flex elemento-3">
-        <h2>Servicio 5</h2>
-      </div>  
     </div>
     <!-- /flexbox-->
 
 <pre style="font-size: 0.8em;">
 contenedor-flex: 
-  flex-flow: row wrap;
+  /*media query
+  si el ancho visible del body es >=768 el servicio 3 pasa a ser el primero
+  */
+  @media screen and (min-width:768px){
+    .elemento-flex:nth-child(3) {
+      order:-1;
+      background-color: green;
+    }
+    .elemento-flex:nth-child(2) {
+      order:3;
+      background-color: rgb(95, 69, 243);
+    }  
+  }  
 </pre>
   </div>
 </body>
