@@ -81,9 +81,22 @@ h2 {
 - **display:inline-flex**
   ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/425x544/6e800afa41b40698173cb45b21b8bb09/image.png)
 - Antes esto se emulaba con los *float* y seguidamente se tenía que limpiar **clear-both** antes de poner otro elemento. Con flex no hace falta
+```css
+/*div fila y/o columna*/
+.contenedor-flex {
+  /*display: flex; /*es el más común. el div se extiende por todo el ancho*/
+  display: inline-flex; /*ajusta el contendido al ancho de la celda, no toma todo el espacio disponible*/
+  /* display: inline-flex; /*el div hace wrap sobre el contenido*/
+  border: 3px solid black;
+  
+  /*flex-direction: column;*/
+  flex-direction: column-reverse;
+}
+```
 
 ### [5. Flex Wrap 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10267834#overview)
 - 
+
 ### [6. Flex Flow y Order 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268006#overview)
 - 
 ### [7. Flex Grow, Flex Shrink, Flex Basis y el Shorthand Flex 9 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268018#overview)
