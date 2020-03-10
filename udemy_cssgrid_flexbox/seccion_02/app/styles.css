@@ -1,76 +1,75 @@
 body {
-  box-sizing: border-box; /*el borde forma parte del contenido*/
+  box-sizing: border-box;
   margin:0;
   background: #ff9966;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-/*div-contenedor*/
-.contenedor {
-  
-  background-color: white;
-  height: calc( 100vh - 20px ); /*la altura de viewport - 20px*/
-  max-width: 1000px;
-  margin: 0 auto; /*top, right, bottom, left*/
-  padding: 20px 30px 0 30px; /*se deja 20 de padding superior pq se resta -20px a la altura*/
-}
-.contenedor:hover{
-  /*border:1px solid greenyellow;*/
-}
-
-/*fuentes y alineacion de h1:h2
-h1: Aprendiendo flexbox
-*/
-h1, h2 {
-  text-align: center;
+  color: white;
   font-family: 'IBM Plex Serif', serif;
+}
+h1, h2, h3, h4 {
+  text-align: center;
+}
+h1 { font-size: 4rem; }
+h2 { font-size: 3rem;}
+h3 { font-size: 2rem;}
+h4 { font-size: 1.8rem; }
+p {
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+.contenedor {
+  /*solo afecta a main y aside*/
+  border:1px solid black; /*guia*/
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*
-servicio1  servicio 2 servicio 3
+flex: en los hijos le indica a la "celda" cuanto tiene que ocupar
+main.nosotros y side.sidebar
+1+1 = 2 => max-witdh /2 = 500px
+
+con el mediaquery le indicamos que si es mayor a 768 (hay espacio para 2 cols) entonces se aplique la proporcion
 */
-h2 {
-  color:white;
+@media (min-width:768px){
+  .nosotros{
+    /*flex:7;*/
+    /*flexgrow(proporcion de crecimiento), flex-shrink(fuerza base siempre), flex-base(minimo siempre);*/
+    flex: 0 0 70%;
+  }
+
+  .sidebar{
+    /*flex:3;*/
+    flex: 0 0 30%;
+  }
 }
 
-/*div fila y/o columna*/
-.contenedor-flex {
-  display: flex; /*es el más común. el div se extiende por todo el ancho*/
-  /*display: inline-flex; /*ajusta el contendido al ancho de la celda, no toma todo el espacio disponible*/
-  /* display: inline-flex; /*el div hace wrap sobre el contenido*/
-  border: 3px solid black;
-  
-  /*flex-direction: column;*/
-  /*flex-direction: column-reverse;*/
-  /*flex-direction:row;*/
-  /*flex-wrap: wrap; /*si se sale del ancho del contenedor  con wrap se obliga al salto de linea*/
-  flex-flow: row-reverse wrap;
+.servicios{
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.elemento-flex{
-  padding: 10px;
-  /*flex-grow: 1; /*indica la proporcion de crecimiento siempre que sobre espacio*/
-  /* Flex: toma 3 parametros: <flex-grow> <flex-shrink> <flex-basis>*/
-  flex: 1 0 auto
+.servicio{
+  /*los items ocuparan todo el ancho siempre y cuando el ancho sea <768*/
+  background-color: cornflowerblue;
+  flex: 0 0 100%;
 }
 
-/*todos los elementos con padding 10 y color rojo*/
-.elemento-flex:nth-child(1) {
-  background-color: #E53935;
+.doble{
+  background-color: bisque;
 }
 
-/*al segundo elemento se le cambia el color*/
-.elemento-flex:nth-child(2) {
-  background-color: #8E24AA;
-  /*flex-grow: 2; /* hace crecer el elemento*/
-  /*flex-grow: 0; /*desactiva el crecimiento*/
-  /*flex-shrink: 0; /*fuerza a que mantenga su tamaño siempre*/
-  /*flex-basis: 50%; /*el minimo en shrink*/
-}
 
-/*solo cambio de color*/
-.elemento-flex:nth-child(3) {
-  background-color: #3F51B5;
-  
+@media (min-width:768px){
+  .servicio{
+    flex:1;
+  }
+
+  .doble{
+    flex:2!important;
+  }
 }

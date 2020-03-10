@@ -198,7 +198,69 @@ si el ancho visible del body es >=768 el servicio 3 pasa a ser el primero
 - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/724x228/0f89d9e6582e7c5f4c79bd0382c3b490/image.png)
 
 ### [8. Flex Grow y flex a fondo 12 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/11558638#overview)
-- 
+```css
+
+.contenedor {
+  /*solo afecta a main y aside*/
+  border:1px solid black; /*guia*/
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*
+flex: en los hijos le indica a la "celda" cuanto tiene que ocupar
+main.nosotros y side.sidebar
+1+1 = 2 => max-witdh /2 = 500px
+
+con el mediaquery le indicamos que si es mayor a 768 (hay espacio para 2 cols) entonces se aplique la proporcion
+*/
+@media (min-width:768px){
+  .nosotros{
+    /*flex:7;*/
+    /*flexgrow(proporcion de crecimiento), flex-shrink(fuerza base siempre), flex-base(minimo siempre);*/
+    flex: 0 0 70%;
+  }
+
+  .sidebar{
+    /*flex:3;*/
+    flex: 0 0 30%;
+  }
+}
+
+.servicios{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.servicio{
+  /*los items ocuparan todo el ancho siempre y cuando el ancho sea <768*/
+  background-color: cornflowerblue;
+  flex: 0 0 100%;
+}
+
+.doble{
+  background-color: bisque;
+}
+
+
+@media (min-width:768px){
+  .servicio{
+    flex:1;
+  }
+
+  .doble{
+    flex:2!important;
+  }
+}
+```
+```html
+```
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/1018x601/ac8edc237cba876bb5dd7c6d3e29a53a/image.png)
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/473x788/5129b328b13b557f6fbca53cc60fcde9/image.png)
+
+
 ### [9. Alineando con Flexbox 9 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268028#overview)
 - 
 ### [10. Poniendo todo en práctica (Video 1 de 3) 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268036#overview)
