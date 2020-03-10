@@ -6,7 +6,9 @@
 ### [2. ¿Qué es Flexbox? 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268178#overview)
 - 
 ### [3. El Contenedor Flex o Flex Container 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10267830#overview)
-- 
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/545x329/b69d4c85e1b991b44a01a6bb8d236809/image.png)
+
+
 ### [4. Flex Direction 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10277196#overview)
 - 
 ### [5. Flex Wrap 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10267834#overview)
