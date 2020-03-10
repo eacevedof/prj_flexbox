@@ -95,7 +95,35 @@ h2 {
 ```
 
 ### [5. Flex Wrap 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10267834#overview)
-- 
+- Problema sin **flex-wrap:wrap**
+  - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/1100x223/13533ce8c23ce1706e2256af4b47d163/image.png)
+- aplicando **flex-wrap:wrap**
+  - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/1049x375/c33ceb5d2c11ddd2ab585de369e79ad8/image.png)
+- El flex-wrap no tiene mucha utilidad con flex-direction:column
+- Tiene su variante, flex-wrap:wrap-reverse
+- **Atajo**: `flex-flow: <row|row-reverse|column|column-reverse> <wrap | wrap-reverse>`
+- Es equivalente a:
+  ```css
+    flex-wrap:wrap;
+    flex-direction:row;
+  equivalente: 
+    flex-flow:row wrap;
+  ```
+```css
+.contenedor-flex {
+  display: flex; /*es el más común. el div se extiende por todo el ancho*/
+  /*display: inline-flex; /*ajusta el contendido al ancho de la celda, no toma todo el espacio disponible*/
+  /* display: inline-flex; /*el div hace wrap sobre el contenido*/
+  border: 3px solid black;
+  
+  /*flex-direction: column;*/
+  /*flex-direction: column-reverse;*/
+  /*flex-direction:row;*/
+  /*flex-wrap: wrap; /*si se sale del ancho del contenedor  con wrap se obliga al salto de linea*/
+  flex-flow: row wrap;
+}
+```
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/469x553/3233b07429c90c7259d0ea62d8c1605f/image.png)
 
 ### [6. Flex Flow y Order 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268006#overview)
 - 
