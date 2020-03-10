@@ -7,7 +7,68 @@
 - 
 ### [3. El Contenedor Flex o Flex Container 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10267830#overview)
 - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/545x329/b69d4c85e1b991b44a01a6bb8d236809/image.png)
+- Despues de aplicar **display:flexbox;**
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/466x245/4359fa84f570fe6cc115e7635ac8a5e9/image.png)
+- Siempre tiene que haber un padre sobre los elementos que quieras que sean *flexibles*
+```css
+body {
+  box-sizing: border-box; /*el borde forma parte del contenido*/
+  margin:0;
+  background: #ff9966;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+/*div-contenedor*/
+.contenedor {
+  
+  background-color: white;
+  height: calc( 100vh - 20px ); /*la altura de viewport - 20px*/
+  max-width: 1000px;
+  margin: 0 auto; /*top, right, bottom, left*/
+  padding: 20px 30px 0 30px; /*se deja 20 de padding superior pq se resta -20px a la altura*/
+}
+.contenedor:hover{
+  /*border:1px solid greenyellow;*/
+}
+
+/*fuentes y alineacion de h1:h2
+h1: Aprendiendo flexbox
+*/
+h1, h2 {
+  text-align: center;
+  font-family: 'IBM Plex Serif', serif;
+}
+
+/*
+servicio1  servicio 2 servicio 3
+*/
+h2 {
+  color:white;
+}
+
+/*div fila y/o columna*/
+.contenedor-flex {
+  display: flex;
+}
+
+/*todos los elementos con padding 10 y color rojo*/
+.elemento-flex {
+  padding: 10px;
+  background-color: #E53935;
+}
+
+/*al segundo elemento se le cambia el color*/
+.elemento-flex:nth-child(2) {
+  background-color: #8E24AA;
+}
+
+/*solo cambio de color*/
+.elemento-flex:nth-child(3) {
+  background-color: #3F51B5;
+}
+```
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e6740d738c3df87855fcc9b/ecad113350f92a551d9b6b42e2c3662a/image.png)
 
 ### [4. Flex Direction 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10277196#overview)
 - 
