@@ -36,7 +36,9 @@ h2 {
 
 /*div fila y/o columna*/
 .contenedor-flex {
-  display: flex;
+  display: flex; /*es el más común. el div se extiende por todo el ancho*/
+  /* display: inline-flex; /*el div hace wrap sobre el contenido*/
+  border: 3px solid black;
 }
 
 /*todos los elementos con padding 10 y color rojo*/

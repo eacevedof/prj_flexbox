@@ -69,6 +69,7 @@ h2 {
 }
 ```
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e6740d738c3df87855fcc9b/ecad113350f92a551d9b6b42e2c3662a/image.png)
+![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e6740d738c3df87855fcc9b/b3f246b62ac8c7f5e9189f90210d662a/image.png)
 
 ### [4. Flex Direction 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10277196#overview)
 - 
