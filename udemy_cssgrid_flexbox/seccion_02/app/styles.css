@@ -26,15 +26,34 @@ h2 {
   /* display:inline-flex; */
   display: flex;
   border: 3px solid black;
+
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  flex-flow: row wrap;
+  /*
+  indica que se renderizarán los items de izquierda a derecha
+  es equivalente a float-left y flex-end a float-right, center sería margin:0 auto;
+  */
+  justify-content: flex-start;
+  justify-content: center; /*centra*/
+  justify-content: space-around; /*centra crea margin entre los items*/
+  justify-content: space-between; /*usado en bootstrap y foundation*/
+
+  height: 400px;
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: baseline;
+  align-items: center;
 }
 
 .elemento-flex {
   padding: 10px;
   background-color: #E53935;
-  /* Crecer con Flex**/ 
+  
 }
 .elemento-flex:nth-child(1) {
-
+  background-color: red;
+  align-self: flex-start;
 }
 
 .elemento-flex:nth-child(2) {
@@ -43,4 +62,6 @@ h2 {
 
 .elemento-flex:nth-child(3) {
   background-color: #3F51B5;
+  align-self: flex-end;
+  align-self: stretch;
 }

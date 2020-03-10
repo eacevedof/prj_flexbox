@@ -291,9 +291,80 @@ con el mediaquery le indicamos que si es mayor a 768 (hay espacio para 2 cols) e
 - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/1018x601/ac8edc237cba876bb5dd7c6d3e29a53a/image.png)
 - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/473x788/5129b328b13b557f6fbca53cc60fcde9/image.png)
 
-
 ### [9. Alineando con Flexbox 9 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268028#overview)
-- 
+- justify-content alineación horizontal
+- align-items alineacion vertical
+- align-self alineacion del item
+```css
+.contenedor-flex {
+  /* display:inline-flex; */
+  display: flex;
+  border: 3px solid black;
+
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  flex-flow: row wrap;
+  /*
+  indica que se renderizarán los items de izquierda a derecha
+  es equivalente a float-left y flex-end a float-right, center sería margin:0 auto;
+  */
+  justify-content: flex-start;
+  justify-content: center; /*centra*/
+  justify-content: space-around; /*centra crea margin entre los items*/
+  justify-content: space-between; /*usado en bootstrap y foundation*/
+
+  height: 400px;
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: baseline;
+  align-items: center;
+}
+
+.elemento-flex {
+  padding: 10px;
+  background-color: #E53935;
+  
+}
+.elemento-flex:nth-child(1) {
+  background-color: red;
+  align-self: flex-start;
+}
+
+.elemento-flex:nth-child(2) {
+  background-color: #8E24AA;
+}
+
+.elemento-flex:nth-child(3) {
+  background-color: #3F51B5;
+  align-self: flex-end;
+  align-self: stretch;
+}
+```
+```html
+  <div class="contenedor">
+
+    <h1>Aprendiendo Flexbox</h1>
+
+    <div class="contenedor-flex">
+      <div class="elemento-flex elemento-1">
+          <h2>Servicio 1</h2>
+      </div>
+      <div class="elemento-flex elemento-2">
+          <h2>Servicio 2</h2>
+      </div>
+      <div class="elemento-flex elemento-3">
+          <h2>Servicio 3 un poco mas de contenido</h2>
+      </div>
+      <div class="elemento-flex elemento-3">
+          <h2>Servicio 3</h2>
+      </div>
+    </div>
+
+  </div>
+```
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/465x479/e881cb08331cbda71b49a63710d9c8c9/image.png)
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/883x468/c4caf5e9e59ee1eb898c5d0777c69645/image.png)
+
 ### [10. Poniendo todo en práctica (Video 1 de 3) 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268036#overview)
 - 
 ### [11. Poniendo todo en práctica (Video 2 de 3) 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268060#overview)
