@@ -366,7 +366,54 @@ con el mediaquery le indicamos que si es mayor a 768 (hay espacio para 2 cols) e
 - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/883x468/c4caf5e9e59ee1eb898c5d0777c69645/image.png)
 
 ### [10. Poniendo todo en práctica (Video 1 de 3) 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268036#overview)
-- 
+```css
+/*
+<header class="header-sitio">
+  <h1>  
+  <nav>
+*/
+.header-sitio {
+  border: 1px solid black;
+  background-color: #03A9F4;
+  padding:0 20px;
+  /* Flex aqui*/
+  display: flex;
+  /*para tamaños menores a 768 se muestra en columna*/
+  flex-direction: column;
+}
+
+
+@media screen and (min-width:768px) {
+  .header-sitio {
+    /*si es >768 se muestra como fila*/
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.header-sitio h1 {
+  color:white;
+}
+
+nav {
+  /*esto hace que el navbar se ponga a la altura del h1*/
+  align-self: center;
+}
+```
+```html
+<header class="header-sitio">
+  <h1>Nombre Sitio</h1>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Nosotros</a>
+    <a href="#">Servicios</a>
+    <a href="#">Portafolio</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
+``` 
+- ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e6740d738c3df87855fcc9b/adfcd6ed39a0d6d064c8dcb161b081e0/image.png)
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/477x198/9ba24ae0c0da2399a231eabf2a1ef5dd/image.png)
 
 ### [11. Poniendo todo en práctica (Video 2 de 3) 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268060#overview)
 - 
