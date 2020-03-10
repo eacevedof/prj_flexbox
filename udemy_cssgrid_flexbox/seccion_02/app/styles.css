@@ -36,9 +36,13 @@ h2 {
 
 /*div fila y/o columna*/
 .contenedor-flex {
-  display: flex; /*es el más común. el div se extiende por todo el ancho*/
+  /*display: flex; /*es el más común. el div se extiende por todo el ancho*/
+  display: inline-flex; /*ajusta el contendido al ancho de la celda, no toma todo el espacio disponible*/
   /* display: inline-flex; /*el div hace wrap sobre el contenido*/
   border: 3px solid black;
+  
+  /*flex-direction: column;*/
+  flex-direction: column-reverse;
 }
 
 /*todos los elementos con padding 10 y color rojo*/

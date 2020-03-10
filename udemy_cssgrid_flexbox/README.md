@@ -72,7 +72,16 @@ h2 {
 ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e6740d738c3df87855fcc9b/b3f246b62ac8c7f5e9189f90210d662a/image.png)
 
 ### [4. Flex Direction 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10277196#overview)
-- 
+- Flex solo tiene la propiedad de organizar sus items como celdas en columna o celdas en fila
+![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/497x361/bd054d12ec95085da49483de0829d9fc/image.png)
+- Cssgrid puede ser en ambas
+- *flex-direction* por defecto es row
+  ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/621x249/5827faa6549193e8426a6b5506b23b7f/image.png)
+  ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/463x551/3990422b980ddc3573cba27d939a0017/image.png)
+- **display:inline-flex**
+  ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/425x544/6e800afa41b40698173cb45b21b8bb09/image.png)
+- Antes esto se emulaba con los *float* y seguidamente se tenía que limpiar **clear-both** antes de poner otro elemento. Con flex no hace falta
+
 ### [5. Flex Wrap 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10267834#overview)
 - 
 ### [6. Flex Flow y Order 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268006#overview)
