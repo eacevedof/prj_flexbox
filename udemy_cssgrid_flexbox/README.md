@@ -167,7 +167,36 @@ si el ancho visible del body es >=768 el servicio 3 pasa a ser el primero
 ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/740x477/3d4be0efa28c3e6c819af7093a0685e1/image.png)
 
 ### [7. Flex Grow, Flex Shrink, Flex Basis y el Shorthand Flex 9 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268018#overview)
-- 
+- Bootstrap usa flexbox y usa flex-basis para definir el ancho
+```css
+.elemento-flex{
+  padding: 10px;
+  /*flex-grow: 1; /*indica la proporcion de crecimiento siempre que sobre espacio*/
+  /* Flex: toma 3 parametros: <flex-grow> <flex-shrink> <flex-basis>*/
+  flex: 1 0 auto
+}
+
+/*todos los elementos con padding 10 y color rojo*/
+.elemento-flex:nth-child(1) {
+  background-color: #E53935;
+}
+
+/*al segundo elemento se le cambia el color*/
+.elemento-flex:nth-child(2) {
+  background-color: #8E24AA;
+  /*flex-grow: 2; /* hace crecer el elemento*/
+  /*flex-grow: 0; /*desactiva el crecimiento*/
+  /*flex-shrink: 0; /*fuerza a que mantenga su tamaño siempre*/
+  /*flex-basis: 50%; /*el minimo en shrink*/
+}
+
+/*solo cambio de color*/
+.elemento-flex:nth-child(3) {
+  background-color: #3F51B5; 
+}
+```
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/724x228/0f89d9e6582e7c5f4c79bd0382c3b490/image.png)
+
 ### [8. Flex Grow y flex a fondo 12 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/11558638#overview)
 - 
 ### [9. Alineando con Flexbox 9 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268028#overview)

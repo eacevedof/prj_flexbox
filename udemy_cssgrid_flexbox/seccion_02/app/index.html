@@ -31,19 +31,9 @@
     <!-- /flexbox-->
 
 <pre style="font-size: 0.8em;">
-contenedor-flex: 
-  /*media query
-  si el ancho visible del body es >=768 el servicio 3 pasa a ser el primero
-  */
-  @media screen and (min-width:768px){
-    .elemento-flex:nth-child(3) {
-      order:-1;
-      background-color: green;
-    }
-    .elemento-flex:nth-child(2) {
-      order:3;
-      background-color: rgb(95, 69, 243);
-    }  
+  .elemento-flex{
+    /* Flex: toma 3 parametros: flex-grow flex-shrink flex-basis*/
+    flex: 1 0 auto
   }  
 </pre>
   </div>
