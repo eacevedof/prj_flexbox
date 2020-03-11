@@ -19,20 +19,42 @@ h2 {
   flex:0 1 100%/*para que no crezca*/
 }
 
-/*
-<main class="contenido-principal">
-  <h2>
-  <article>
-*/
-.contenido-principal{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /*align-items: center;**/
-}
-
-@media (min-width:768px){
+@media screen and (min-width:480px){
+  /*
+  <main class="contenido-principal">
+    <h2>
+    <article>
+  */
   .contenido-principal{
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*align-items: center;**/
   }
-}
+  /*
+  <article>
+    <img>
+    <div>
+  */
+  .entrada {
+    /*
+    a cada article se le configura un ancho de 50 - 1rem 
+    si no pusiera 1rem no se mostraría padding
+    se mostrarán 2 cajas 
+    */
+    flex: 0 1 calc(50% - 1rem);
+  }
+
+}/*media 480*/
+
+@media screen and (min-width:768px){
+
+  .entrada {
+    /*
+    esto hace que se muestren 3 cajas
+    */
+    flex: 0 1 calc(33% - 1rem);
+  }
+
+}/*media 768px*/
+

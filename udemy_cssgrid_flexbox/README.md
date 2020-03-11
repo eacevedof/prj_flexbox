@@ -566,7 +566,50 @@ h2 {
 }
 ```
 ### [14. Agregando Media Queries a los Cards 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269018#overview)
-- 
+```css
+@media screen and (min-width:480px){
+  /*
+  <main class="contenido-principal">
+    <h2>
+    <article>
+  */
+  .contenido-principal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*align-items: center;**/
+  }
+  /*
+  <article>
+    <img>
+    <div>
+  */
+  .entrada {
+    /*
+    a cada article se le configura un ancho de 50 - 1rem 
+    si no pusiera 1rem no se mostraría padding
+    se mostrarán 2 cajas 
+    */
+    flex: 0 1 calc(50% - 1rem);
+  }
+
+}/*media 480*/
+
+@media screen and (min-width:768px){
+
+  .entrada {
+    /*
+    esto hace que se muestren 3 cajas
+    */
+    flex: 0 1 calc(33% - 1rem);
+  }
+
+}/*media 768px*/
+```
+- ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e6740d738c3df87855fcc9b/72d23fcbc35e8332132901a716d0d32e/image.png)
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/480x651/33cdd84be9054784a85a424470374cd6/image.png)
+
+
 ### [15. Estilos a los cards 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269652#overview)
 - 
 ### Sección 4: Creando Menús de Navegación con Flexbox 0 / 6|35 min
