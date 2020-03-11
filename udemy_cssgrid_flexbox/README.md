@@ -521,8 +521,50 @@ footer p {
 
 ### Sección 3: PROYECTO: Diseño de tipo Cards en Flexbox 0 / 3|16 min
 ### [13. Arrancando el Proyecto 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268074#overview)
-- 
+- **El proyecto**
+- ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e6740d738c3df87855fcc9b/a7079ee734ca3c91eb9545ba4ef33db8/image.png)
+- `/*cuando agregemos padding no afecte el ancho de nuestros elementos*/
+  box-sizing: border-box;`
+```css
+body {
+  /*cuando agregemos padding no afecte el ancho de nuestros elementos*/
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
 
+.contenedor{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/*todas las imagenes*/
+img {
+  /* son responsivas */
+  max-width: 100%;
+}
+
+h2 {
+  flex:0 1 100%/*para que no crezca*/
+}
+
+/*
+<main class="contenido-principal">
+  <h2>
+  <article>
+*/
+.contenido-principal{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*align-items: center;**/
+}
+
+@media (min-width:768px){
+  .contenido-principal{
+    flex-direction: column;
+  }
+}
+```
 ### [14. Agregando Media Queries a los Cards 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269018#overview)
 - 
 ### [15. Estilos a los cards 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269652#overview)

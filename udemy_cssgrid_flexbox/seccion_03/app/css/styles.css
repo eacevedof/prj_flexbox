@@ -1,0 +1,38 @@
+body {
+  /*cuando agregemos padding no afecte el ancho de nuestros elementos*/
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+.contenedor{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/*todas las imagenes*/
+img {
+  /* son responsivas */
+  max-width: 100%;
+}
+
+h2 {
+  flex:0 1 100%/*para que no crezca*/
+}
+
+/*
+<main class="contenido-principal">
+  <h2>
+  <article>
+*/
+.contenido-principal{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*align-items: center;**/
+}
+
+@media (min-width:768px){
+  .contenido-principal{
+    flex-direction: column;
+  }
+}
