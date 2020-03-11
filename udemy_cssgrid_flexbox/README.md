@@ -522,6 +522,7 @@ footer p {
 ### Sección 3: PROYECTO: Diseño de tipo Cards en Flexbox 0 / 3|16 min
 ### [13. Arrancando el Proyecto 5 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10268074#overview)
 - 
+
 ### [14. Agregando Media Queries a los Cards 4 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269018#overview)
 - 
 ### [15. Estilos a los cards 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269652#overview)
