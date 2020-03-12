@@ -888,55 +888,55 @@ nav.sencillo
 ### [17. Creando un Menú con Iconos (Pt 1 de 2) 7 min]](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269668#overview)
 - [fontawesome icons](https://fontawesome.com/icons?d=gallery)
 ```html
-    <h2>Con Iconos</h2>
-    <nav clas="iconos">
-      <ul>
-        <li>
-          <a href="#">
-            <div class="icono">
-              <i class="fas fa-home"></i>
-            </div>
-            <div class="texto">
-              Inicio
-              <span>Página principal</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <div class="icono">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="texto">
-              Contacto
-              <span>Escribenos aqui</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <div class="icono">
-              <i class="fas fa-dollar-sign"></i>
-            </div>
-            <div class="texto">
-              Tienda Virtual
-              <span>Adquiere nuestros artículos</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <div class="icono">
-              <i class="fas fa-question"></i>
-            </div>
-            <div class="texto">
-              Asistencia
-              <span>Necesitas ayuda?</span>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </nav>
+<h2>Con Iconos</h2>
+<nav clas="iconos">
+  <ul>
+    <li>
+      <a href="#">
+        <div class="icono">
+          <i class="fas fa-home"></i>
+        </div>
+        <div class="texto">
+          Inicio
+          <span>Página principal</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="icono">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="texto">
+          Contacto
+          <span>Escribenos aqui</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="icono">
+          <i class="fas fa-dollar-sign"></i>
+        </div>
+        <div class="texto">
+          Tienda Virtual
+          <span>Adquiere nuestros artículos</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="icono">
+          <i class="fas fa-question"></i>
+        </div>
+        <div class="texto">
+          Asistencia
+          <span>Necesitas ayuda?</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</nav>
 ```
 - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/454x438/9794f0a2fa120da983874d9f99401223/image.png)
 
