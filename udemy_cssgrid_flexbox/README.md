@@ -790,13 +790,14 @@ h3 {
     </article>
 
   </main>
-  
+
 </div><!--.contenido-->
 ```
 ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/460x861/8baf80735c752df82d8dbf7458093978/image.png)
 ### Sección 4: Creando Menús de Navegación con Flexbox 0 / 6|35 min
 ### [16. Creando un Menú Sencillo 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269656#overview)
-- 
+- ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e6740d738c3df87855fcc9b/fe1e7be53310a77907e2af6b40a27ec0/image.png)
+
 ### [17. Creando un Menú con Iconos (Pt 1 de 2) 7 min]](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269668#overview)
 - 
 ### [18. Creando un Menú con Iconos (Pt 2 de 2) 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269704#overview)
