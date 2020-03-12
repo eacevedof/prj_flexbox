@@ -16,7 +16,18 @@ img {
 }
 
 h2 {
-  flex:0 1 100%/*para que no crezca*/
+  flex:0 1 100%;/*para que no crezca*/
+  /*border: 1px solid red;*/
+  text-align: center; /*
+  este elmento ocupa toda la linea y con align-center se centra
+  centrar título
+  */
+  font-size: 1.6rem;
+}
+h3 {
+  font-family: "Libre Baskerville", serif;
+  margin:0;
+  font-weight: 700;
 }
 
 @media screen and (min-width:480px){
@@ -58,3 +69,48 @@ h2 {
 
 }/*media 768px*/
 
+/*
+<article>
+  <div.contenido>
+    h3
+    p
+    a
+*/
+.contenido {
+  background-color: #fff;
+  margin-bottom: 1rem;
+  padding:1rem;
+  text-transform: uppercase; /*a mayúsculas*/
+  text-align: center; /*
+  centra los elementos
+   h3,p y a
+  */
+}
+
+.contenido h3{
+  text-align: center; /*se centra el título*/
+  font-size: .9rem;
+  line-height: 1.4rem; /*altura de la linea del texto*/
+}
+
+.contenido span{
+  color: #db008d
+}
+
+/*
+<a>Leer más<a/>
+*/
+.boton {
+  background-color: #008fd1;
+  color: #fff;
+  padding: .8rem 3rem;
+  margin-top: 1rem; 
+  /*
+  esta separación no funciona por si sola ya que los <a> usan por defecto el display:inline
+  si lo dejo como block ocuparía toda la fila y el texto no estaria centrado
+  como inline-block emularia a un bloque de texto en una linea
+  */
+  display: inline-block;
+  text-decoration: none; /*quito el subrayado*/
+  align-self: center;
+}

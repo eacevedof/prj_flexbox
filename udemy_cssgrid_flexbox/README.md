@@ -609,9 +609,191 @@ h2 {
 - ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e6740d738c3df87855fcc9b/72d23fcbc35e8332132901a716d0d32e/image.png)
 - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/480x651/33cdd84be9054784a85a424470374cd6/image.png)
 
-
 ### [15. Estilos a los cards 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269652#overview)
-- 
+```css
+body {
+  /*cuando agregemos padding no afecte el ancho de nuestros elementos*/
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+.contenedor{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/*todas las imagenes*/
+img {
+  /* son responsivas */
+  max-width: 100%;
+}
+
+h2 {
+  flex:0 1 100%;/*para que no crezca*/
+  /*border: 1px solid red;*/
+  text-align: center; /*
+  este elmento ocupa toda la linea y con align-center se centra
+  centrar título
+  */
+  font-size: 1.6rem;
+}
+h3 {
+  font-family: "Libre Baskerville", serif;
+  margin:0;
+  font-weight: 700;
+}
+
+@media screen and (min-width:480px){
+  /*
+  <main class="contenido-principal">
+    <h2>
+    <article>
+  */
+  .contenido-principal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*align-items: center;**/
+  }
+  /*
+  <article>
+    <img>
+    <div>
+  */
+  .entrada {
+    /*
+    a cada article se le configura un ancho de 50 - 1rem 
+    si no pusiera 1rem no se mostraría padding
+    se mostrarán 2 cajas 
+    */
+    flex: 0 1 calc(50% - 1rem);
+  }
+
+}/*media 480*/
+
+@media screen and (min-width:768px){
+
+  .entrada {
+    /*
+    esto hace que se muestren 3 cajas
+    */
+    flex: 0 1 calc(33% - 1rem);
+  }
+
+}/*media 768px*/
+
+/*
+<article>
+  <div.contenido>
+    h3
+    p
+    a
+*/
+.contenido {
+  background-color: #fff;
+  margin-bottom: 1rem;
+  padding:1rem;
+  text-transform: uppercase; /*a mayúsculas*/
+  text-align: center; /*
+  centra los elementos
+   h3,p y a
+  */
+}
+
+.contenido h3{
+  text-align: center; /*se centra el título*/
+  font-size: .9rem;
+  line-height: 1.4rem; /*altura de la linea del texto*/
+}
+
+.contenido span{
+  color: #db008d
+}
+
+/*
+<a>Leer más<a/>
+*/
+.boton {
+  background-color: #008fd1;
+  color: #fff;
+  padding: .8rem 3rem;
+  margin-top: 1rem; 
+  /*
+  esta separación no funciona por si sola ya que los <a> usan por defecto el display:inline
+  si lo dejo como block ocuparía toda la fila y el texto no estaria centrado
+  como inline-block emularia a un bloque de texto en una linea
+  */
+  display: inline-block;
+  text-decoration: none; /*quito el subrayado*/
+  align-self: center;
+}
+```
+```html
+<div class="contenedor">
+  <main class="contenido-principal">
+    
+    <h2>Últimas Entradas</h2>
+
+    <article class="entrada">
+        <img src="img/01.jpg" alt="texto entrada">
+        <div class="contenido">
+            <h3>Tips para viajar con poco presupuesto</h3>
+            <p>Publicado el: <span>19 Julio, 2018</span></p>
+            <p>Por: <span>Blog Viajes</span></p>
+            <a href="#" class="boton"> Leer más</a>
+        </div>
+    </article>
+    <article class="entrada">
+        <img src="img/02.jpg" alt="texto entrada">
+        <div class="contenido">
+            <h3>Todo lo necesario para tu viaje</h3>
+            <p>Publicado el: <span>19 Julio, 2018</span></p>
+            <p>Por: <span>Blog Viajes</span></p>
+            <a href="#" class="boton"> Leer más</a>
+        </div>
+    </article>
+    <article class="entrada">
+        <img src="img/03.jpg" alt="texto entrada">
+        <div class="contenido">
+            <h3>El equipo necesario para tomar las mejores fotografías</h3>
+            <p>Publicado el: <span>19 Julio, 2018</span></p>
+            <p>Por: <span>Blog Viajes</span></p>
+            <a href="#" class="boton"> Leer más</a>
+        </div>
+    </article>
+    <article class="entrada">
+        <img src="img/04.jpg" alt="texto entrada">
+        <div class="contenido">
+            <h3>Checklist para tu próximo viaje</h3>
+            <p>Publicado el: <span>19 Julio, 2018</span></p>
+            <p>Por: <span>Blog Viajes</span></p>
+            <a href="#" class="boton"> Leer más</a>
+        </div>
+    </article>
+    <article class="entrada">
+        <img src="img/05.jpg" alt="texto entrada">
+        <div class="contenido">
+            <h3>Los mejores lugares para visitar este otoño</h3>
+            <p>Publicado el: <span>19 Julio, 2018</span></p>
+            <p>Por: <span>Blog Viajes</span></p>
+            <a href="#" class="boton"> Leer más</a>
+        </div>
+    </article>
+    <article class="entrada">
+        <img src="img/06.jpg" alt="texto entrada">
+        <div class="contenido">
+            <h3>Los mejores lugares para visitar con montañas</h3>
+            <p>Publicado el: <span>19 Julio, 2018</span></p>
+            <p>Por: <span>Blog Viajes</span></p>
+            <a href="#" class="boton"> Leer más</a>
+        </div>
+    </article>
+
+  </main>
+  
+</div><!--.contenido-->
+```
+![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/460x861/8baf80735c752df82d8dbf7458093978/image.png)
 ### Sección 4: Creando Menús de Navegación con Flexbox 0 / 6|35 min
 ### [16. Creando un Menú Sencillo 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269656#overview)
 - 
