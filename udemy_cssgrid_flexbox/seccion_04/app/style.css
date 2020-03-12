@@ -7,30 +7,63 @@ body {
     font-family: 'IBM Plex Serif', serif;
 }
 
+/*
+<contenedor>
+  h1{Menu Sencillo}
+  nav.sencillo
+  h2
+  nav.iconos
+  h2
+  nav.dropdown
+  ..
+*/
 .contenedor {
-    background-color: white;
-    min-height: calc( 100vh - 20px );
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px 30px 0 30px;
+  background-color: white;
+  min-height: calc( 100vh - 20px );
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 30px 0 30px;
 }
 
 nav {
-    background-color: #3F51B5;
+  background-color: #3F51B5;
 }
 nav ul {
-    list-style:none;
-    margin:0;
-    padding:0;
+  list-style:none;
+  margin:0;
+  padding:0;
 }
 nav ul li {
-    padding: 20px;
+  padding: 20px;
 }
 nav ul li:hover {
-    background-color: #1a2770;
+  background-color: #1a2770;
 }
 nav ul a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.4rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+/*
+nav.sencillo
+*/
+.sencillo ul{
+  display: flex;
+  justify-content: space-between; 
+  flex-direction: column;
+}
+
+.sencillo ul li{
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+@media screen and (min-width:768px){
+  .sencillo ul{
+    flex-direction: row;
+  }
+  .sencillo ul li {
+    margin-bottom: 0;
+  }
 }

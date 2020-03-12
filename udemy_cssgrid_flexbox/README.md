@@ -796,7 +796,94 @@ h3 {
 ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/460x861/8baf80735c752df82d8dbf7458093978/image.png)
 ### Sección 4: Creando Menús de Navegación con Flexbox 0 / 6|35 min
 ### [16. Creando un Menú Sencillo 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269656#overview)
+```css
+body {
+    box-sizing: border-box;
+    margin:0;
+    background: #ff9966;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'IBM Plex Serif', serif;
+}
+
+/*
+<contenedor>
+  h1{Menu Sencillo}
+  nav.sencillo
+  h2
+  nav.iconos
+  h2
+  nav.dropdown
+  ..
+*/
+.contenedor {
+  background-color: white;
+  min-height: calc( 100vh - 20px );
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 30px 0 30px;
+}
+
+nav {
+  background-color: #3F51B5;
+}
+nav ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+nav ul li {
+  padding: 20px;
+}
+nav ul li:hover {
+  background-color: #1a2770;
+}
+nav ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+/*
+nav.sencillo
+*/
+.sencillo ul{
+  display: flex;
+  justify-content: space-between; 
+  flex-direction: column;
+}
+
+.sencillo ul li{
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+@media screen and (min-width:768px){
+  .sencillo ul{
+    flex-direction: row;
+  }
+  .sencillo ul li {
+    margin-bottom: 0;
+  }
+}
+```
+```html
+<div class="contenedor">
+  <h1>Menú Sencillo</h1>
+  <nav class="sencillo">
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Tienda Virtual</a></li>
+        <li><a href="#">Asistencia</a></li>
+    </ul>
+  </nav>
+</div>
+```
 - ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e6740d738c3df87855fcc9b/fe1e7be53310a77907e2af6b40a27ec0/image.png)
+- ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/445x504/9394b63a08845c7e04d22ade0e987623/image.png)
 
 ### [17. Creando un Menú con Iconos (Pt 1 de 2) 7 min]](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269668#overview)
 - 
