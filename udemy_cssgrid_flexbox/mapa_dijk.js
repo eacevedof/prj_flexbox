@@ -112,7 +112,7 @@ const _get_times = (arfullpath)=>{
 
 //============================
 //let distances = [{dist:0,fromnode:0,innode:0}]
-let sealed = []
+const sealed = []
 let nodehist = []
 let artimes = []
 const arfullpath = []
