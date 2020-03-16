@@ -80,13 +80,6 @@ const _get_sibl_cleaned = (arsiblings,arclosed)=>{
   return arnodesok
 }
 
-const _get_path_idstance = (iend)=>{
-  const objnode = nodehist.filter(obj => obj.node == iend)[0]
-  const ilen = objnode.hist.length-1
-  //console.log("node-hist",objnode.hist[ilen])
-  return objnode.hist[ilen].dist
-}
-
 const _load_path = (iend,istartnode)=>{
   const objnode = nodehist.filter(obj => obj.node == iend)[0]
   const ilen = objnode.hist.length - 1
@@ -114,7 +107,6 @@ const _get_times = (arfullpath)=>{
 //let distances = [{dist:0,fromnode:0,innode:0}]
 const sealed = []
 let nodehist = []
-let artimes = []
 const arfullpath = []
 
 const _dijkstra = ()=>{
@@ -166,8 +158,7 @@ const _dijkstra = ()=>{
   arfullpath.push(iendnode)
   _load_path(iendnode,istartnode)
   arfullpath.reverse()
-  artimes = _get_times(arfullpath)
-  const itottime = _get_path_idstance(iendnode)
+  const artimes = _get_times(arfullpath)
 
   const msg = `[${arfullpath.toString()}]. Tiempo más rapido is: ${artimes.join(" + ")} = ${artimes.reduce((ac,val)=>ac+val)}`
   console.log("msg:",msg)
@@ -178,5 +169,4 @@ const _dijkstra = ()=>{
 _dijkstra()
 console.log("sealed:",sealed)
 console.log("fullpath:",arfullpath)
-console.log("artimes",artimes)
 console.log("\n\n",JSON.stringify(nodehist))
