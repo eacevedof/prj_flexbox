@@ -67,3 +67,25 @@ nav.sencillo
     margin-bottom: 0;
   }
 }
+
+/*
+iconos
+<contenedor>
+  nav.iconos
+    ul
+      li
+        a
+          div
+            i
+          div.texto
+            span
+*/
+.iconos ul{
+  display:flex;
+}
+
+.iconos .texto span{
+  font-size: .8rem;
+  display: block;
+  margin-top: .5rem;
+}

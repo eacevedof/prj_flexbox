@@ -940,10 +940,9 @@ nav.sencillo
 ```
 - ![](https://trello-attachments.s3.amazonaws.com/5e6740d738c3df87855fcc9b/454x438/9794f0a2fa120da983874d9f99401223/image.png)
 
-
-
 ### [18. Creando un Menú con Iconos (Pt 2 de 2) 7 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269704#overview)
 - 
+
 ### [19. Creando un Dropdown Menu 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269708#overview)
 - 
 ### [20. Creando un Menú de Redes Sociales 6 min](https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/lecture/10269720#overview)
