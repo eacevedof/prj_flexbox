@@ -9,7 +9,7 @@ const roads = [
 	{from: 3, to: 4, dist: 10}
 ];
 
-const _get_dist_nodes = () => {
+const _get_dist_nodes = (roads) => {
   const nodes = []
 
   roads.forEach( obj =>{
@@ -21,12 +21,12 @@ const _get_dist_nodes = () => {
   return dist.sort()
 }
 
-const _get_siblings = inode => {
+const _get_siblings = (inode,roads) => {
   const nodes = roads.filter(obj => obj.from == inode).map(obj => obj.to)
   return nodes
 }
 
-const _get_distance = (node1,node2)=>{
+const _get_distance = (node1,node2,roads)=>{
   const arnode = roads.filter(obj => obj.from == node1 && obj.to == node2)
   return arnode[0].dist
 }
@@ -90,7 +90,7 @@ const _load_path = (iend,istartnode)=>{
   }
 }
 
-const _get_times = (arfullpath)=>{
+const _get_times = (arfullpath,roads)=>{
   const artimes = []
   for(let i=0; i<arfullpath.length; i++){
     let inext = i+1;
@@ -109,11 +109,11 @@ const sealed = []
 let nodehist = []
 const arfullpath = []
 
-const _dijkstra = ()=>{
-  const istartnode = 0
-  const iendnode = 4
+const _dijkstra = (roads,istartnode,iendnode)=>{
+  //const istartnode = 0
+  //const iendnode = 4
 
-  const nodes = _get_dist_nodes()
+  const nodes = _get_dist_nodes(roads)
 
   let nextnode = null
 
@@ -135,13 +135,13 @@ const _dijkstra = ()=>{
     }
     
     const lastdist = _get_last_dist(inode)
-    const siblings = _get_siblings(inode)
+    const siblings = _get_siblings(inode, roads)
     //elimino los nodos sellados
     const siblingsok = _get_sibl_cleaned(siblings,sealed)
     
     const sibldists = [] 
     siblingsok.forEach(node2 => {
-      const sibldist = _get_distance(inode,node2)
+      const sibldist = _get_distance(inode,node2,roads)
   
       const sumdist = sibldist + lastdist
       _add_hist(node2, sumdist, inode)
@@ -158,7 +158,7 @@ const _dijkstra = ()=>{
   arfullpath.push(iendnode)
   _load_path(iendnode,istartnode)
   arfullpath.reverse()
-  const artimes = _get_times(arfullpath)
+  const artimes = _get_times(arfullpath,roads)
 
   const msg = `[${arfullpath.toString()}]. Tiempo más rapido is: ${artimes.join(" + ")} = ${artimes.reduce((ac,val)=>ac+val)}`
   console.log("msg:",msg)
@@ -166,7 +166,7 @@ const _dijkstra = ()=>{
 }//dijkstra 
 
 
-_dijkstra()
+_dijkstra(roads,0,4)
 console.log("sealed:",sealed)
 console.log("fullpath:",arfullpath)
 console.log("\n\n",JSON.stringify(nodehist))
