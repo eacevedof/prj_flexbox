@@ -6,7 +6,7 @@ const roads = [
 	{from: 1, to: 3, drivingTime: 2},
 	{from: 2, to: 3, drivingTime: 2},
 	{from: 2, to: 4, drivingTime: 5},
-	//{from: 3, to: 2, drivingTime: 2},
+	{from: 3, to: 2, drivingTime: 2},
 	{from: 3, to: 4, drivingTime: 10}
 ];
 
@@ -23,32 +23,29 @@ const _has_parent = (inode)=>{
 
 const _get_from = (inode)=>{
   const arto =  roads.filter(obj => obj.from == inode)
-  console.table(arto)
+  //console.table(arto)
   return arto
 }
 
 const archilds = []
 
+const previous = []
+
 const _get_childs = (inode)=>{
+  archilds.push(inode)
   if(_has_child(inode)){
-    console.log("node "+inode+" has childs")
-    //console.log("...getting childs")
-    //console.log("call self for each")
+    console.log("inode:",inode)
+    //archilds.push(inode)
     const arto = _get_from(inode)
-    console.log("arto:",arto)
-    arto.forEach(obj => _get_childs(obj.to))
+    //console.log(inode,arto)
+    arto.forEach(obj => {
+      if(!archilds.includes(obj.to))
+        _get_childs(obj.to)
+    })
   }
-  else{
-    console.log("node "+inode+" has no childs")
-    archilds.push(inode)
-    return inode
-  }
-}
+
+}//_get_childs
 
 _get_childs(0)
-console.table(roads)
-console.log("childs of:",0)
-console.table(archilds)
-//_get_childs(1)
-//_get_childs(2)
-//_get_childs(4)
+//console.log("previous",previous)
+console.log("archilds",archilds)

@@ -117,6 +117,7 @@ const _dijkstra = (roads,istartnode,iendnode)=>{
 
   let nextnode = null
 
+  //no todos tienen que estar sellados, puede ser esto o que se haya llegado al nodo destino
   while (!_all_sealed(nodes,sealed)) {
 
     let inode = nextnode
@@ -127,18 +128,13 @@ const _dijkstra = (roads,istartnode,iendnode)=>{
       _add_hist(inode,0,inode)
       sealed.push(inode)
     }
-
-    if(inode == iendnode){
-      //si es el último nodo no tiene destino
-      sealed.push(inode)
-      continue;
-    }
     
     const lastdist = _get_last_dist(inode)
     const siblings = _get_siblings(inode, roads)
     //elimino los nodos sellados
     const siblingsok = _get_sibl_cleaned(siblings,sealed)
-    
+    //si solo queda el
+
     const sibldists = [] 
     siblingsok.forEach(node2 => {
       const sibldist = _get_distance(inode,node2,roads)
@@ -166,7 +162,7 @@ const _dijkstra = (roads,istartnode,iendnode)=>{
 }//dijkstra 
 
 
-_dijkstra(roads,0,4)
+_dijkstra(roads,2,4)
 console.log("sealed:",sealed)
 console.log("fullpath:",arfullpath)
 console.log("\n\n",JSON.stringify(nodehist))
