@@ -97,10 +97,7 @@ const _is_allvisited = (allnodes,visited)=>{
 
 const _get_last_item = array => array.length-1>0 ? array[array.length-1] : null
 
-
-const allnodes = _get_dist_nodes(roads)
-
-
+//const allnodes = _get_dist_nodes(roads)
 
 //deep first traversal
 const dfs = (istart,iend,roads)=>{
@@ -128,6 +125,35 @@ const _all_paths = (ifrom,ifinish,visited,pathlist,roads)=>{
 
 }
 
+//breadth first search (busqueda por anchura)
+const bfs = (roads,ifrom)=>{
+  //const allnodes = _get_dist_nodes(roads)
+  const visited = []
+  const distancia = []
+  const padre = []
+  
+  visited.push(ifrom)
+  distancia.push({ifrom:0})
+
+  const queue = []
+  queue.push(ifrom)
+  while (queue.length!=0){
+    const inode = queue.pop()
+    const notvisited = _get_not_visited(inode,roads,visited)
+    notvisited.forEach(xnode => {
+      visited.push(xnode)
+      distancia.push({node:xnode,dist:0})
+      padre.push({node:inode,child:xnode})
+      queue.push(xnode)
+    })
+  }
+  //console.log("visited:",visited,"distancia",distancia,"padre:",padre)
+  console.table(visited)
+  console.table(distancia)
+  console.table(padre)
+}
+
+
 //hay arista
 const _is_edge = (istart,iend,roads)=>{
   const arres = roads.filter(obj => obj.from==istart && obj.to==iend)
@@ -147,7 +173,6 @@ const _get_adyacency = (roads)=>{
   })
   return matrix
 }
-
 
 const _get_product = (m1,m2)=>{
   //console.table(m1)
@@ -205,5 +230,6 @@ const _get_num_roads = (inodes,roads,istart,ifinish)=>{
 
 const istart = 0, iend = 4
 const aradjacen = _get_adyacency(roads)
-//console.table(aradjacen)
-dfs(istart,iend,roads)
+console.table(aradjacen)
+//dfs(istart,iend,roads)
+bfs(roads,istart)
