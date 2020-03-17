@@ -99,32 +99,34 @@ const _get_last_item = array => array.length-1>0 ? array[array.length-1] : null
 
 
 const allnodes = _get_dist_nodes(roads)
-const objdistance = {}
-allnodes.forEach(xnode => {
-  objdistance[xnode] = -1
-})
 
-console.log(objdistance)
 
-const bfs = (istart,aradjacen)=>{
-  const q = []
-  q.push(istart)
-  objdistance[istart] = 0
 
-  let actual, next
+//deep first traversal
+const dfs = (istart,iend,roads)=>{
 
-  while (q.length!=0) {
-    actual = q.pop()
-    for( let i=0; i<aradjacen[actual].length; i++){
-      next = aradjacen[actual][i]
-      if(objdistance[next]== -1){
-        objdistance[next] = objdistance[actual] + 1
-        q.push(next)
-      }
-    }
-  }//whyle q.length
+  const visited = []
+  const pathlist = []
 
-}//bfs
+  _all_paths(istart,iend,visited,pathlist,roads)
+}
+
+const _all_paths = (ifrom,ito,visited,pathlist,roads)=>{
+  visited.push(ifrom)
+
+  if(ifrom == ito){
+    console.log(pathlist)
+  }
+
+  const childs = _get_not_visited(ifrom,roads,visited)
+  childs.forEach(xnode => {
+    pathlist.push(xnode)
+    _all_paths(xnode,ito,visited,pathlist,roads)
+    const irmv = pathlist.indexOf(xnode)
+    pathlist.splice(irmv,1)
+  })
+
+}
 
 //hay arista
 const _is_edge = (istart,iend,roads)=>{
@@ -201,18 +203,7 @@ const _get_num_roads = (inodes,roads,istart,ifinish)=>{
   return total
 }
 
-const istart = 0
+const istart = 0, iend = 4
 const aradjacen = _get_adyacency(roads)
-console.table(aradjacen)
-bfs(istart,aradjacen)
-//console.log("previous",previous)
-//console.log("archilds",archilds)
-
-//_get_product([[3,2],[1,4]],[[7,0],[5,6]])
-//const matrix = _get_adyacency(roads)
-//console.log("matix aradjacen")
-//console.table(matrix)
-//_get_mat_potency(matrix,1)
-
-//_get_product([[3,2],[1,4]],[[7,0],[5,6]])
-//_get_num_roads(5,roads,0,4)
+//console.table(aradjacen)
+dfs(istart,iend,roads)
