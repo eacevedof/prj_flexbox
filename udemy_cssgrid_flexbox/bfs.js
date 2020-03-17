@@ -92,12 +92,16 @@ const _is_edge = (istart,iend,roads)=>{
 
 const _get_adyacency = (roads)=>{
   const allnodes = _get_dist_nodes(roads)
+  const matrix = []
   allnodes.forEach((xnode,i)=>{
-    
+    const row = []
     allnodes.forEach((ynode,j)=>{
-
+      const is_edge = _is_edge(xnode,ynode,roads)
+      row.push(is_edge?1:0)
     })
+    matrix.push(row)
   })
+  return matrix
 }
 
 
@@ -140,4 +144,7 @@ const istart = 0
 //console.log("previous",previous)
 //console.log("archilds",archilds)
 
-_get_product([[3,2],[1,4]],[[7,0],[5,6]])
+//_get_product([[3,2],[1,4]],[[7,0],[5,6]])
+const matrix = _get_adyacency(roads)
+console.table(matrix)
+//_get_product([[3,2],[1,4]],[[7,0],[5,6]])
