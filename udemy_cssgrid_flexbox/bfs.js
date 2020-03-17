@@ -111,17 +111,17 @@ const dfs = (istart,iend,roads)=>{
   _all_paths(istart,iend,visited,pathlist,roads)
 }
 
-const _all_paths = (ifrom,ito,visited,pathlist,roads)=>{
+const _all_paths = (ifrom,ifinish,visited,pathlist,roads)=>{
   visited.push(ifrom)
 
-  if(ifrom == ito){
+  if(ifrom == ifinish){
     console.log(pathlist)
   }
 
   const childs = _get_not_visited(ifrom,roads,visited)
   childs.forEach(xnode => {
     pathlist.push(xnode)
-    _all_paths(xnode,ito,visited,pathlist,roads)
+    _all_paths(xnode,ifinish,visited,pathlist,roads)
     const irmv = pathlist.indexOf(xnode)
     pathlist.splice(irmv,1)
   })
