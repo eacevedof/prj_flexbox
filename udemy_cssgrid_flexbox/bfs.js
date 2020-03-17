@@ -98,30 +98,34 @@ const _is_allvisited = (allnodes,visited)=>{
 const _get_last_item = array => array.length-1>0 ? array[array.length-1] : null
 
 
-const steps = []
-let queue = []
-const visited = []
-
 const allnodes = _get_dist_nodes(roads)
+const objdistance = {}
+allnodes.forEach(xnode => {
+  objdistance[xnode] = -1
+})
 
+console.log(objdistance)
 
-const _get_path = (istart)=>{
-  steps.push(istart)
-  
-  queue.push(istart)
-  visited.push(istart)
+const bfs = (istart,aradjacen)=>{
+  const q = []
+  q.push(istart)
+  objdistance[istart] = 0
 
-  if(!_is_allvisited(allnodes,visited)){
-    let inode = _get_last_item(queue)
-    const notvisited = _get_not_visited(inode)
-    notvisited.forEach(xnode => {
-      queue.push(xnode)
-      visited.push(xnode)
-    })
-  }
-  
+  let actual, next
 
-}
+  while (q.length!=0) {
+    actual = q.pop()
+    for( let i=0; i<aradjacen[actual].length; i++){
+      next = aradjacen[actual][i]
+      if(objdistance[next]== -1){
+        objdistance[next] = objdistance[actual] + 1
+        q.push(next)
+      }
+    }
+  }//whyle q.length
+
+}//bfs
+
 //hay arista
 const _is_edge = (istart,iend,roads)=>{
   const arres = roads.filter(obj => obj.from==istart && obj.to==iend)
@@ -198,15 +202,17 @@ const _get_num_roads = (inodes,roads,istart,ifinish)=>{
 }
 
 const istart = 0
-//_get_path(istart)
+const aradjacen = _get_adyacency(roads)
+console.table(aradjacen)
+bfs(istart,aradjacen)
 //console.log("previous",previous)
 //console.log("archilds",archilds)
 
 //_get_product([[3,2],[1,4]],[[7,0],[5,6]])
 //const matrix = _get_adyacency(roads)
-//console.log("matix adjacency")
+//console.log("matix aradjacen")
 //console.table(matrix)
 //_get_mat_potency(matrix,1)
 
 //_get_product([[3,2],[1,4]],[[7,0],[5,6]])
-_get_num_roads(5,roads,0,4)
+//_get_num_roads(5,roads,0,4)
