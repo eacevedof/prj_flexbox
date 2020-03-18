@@ -104,22 +104,38 @@ const dfs = (istart,iend,roads)=>{
 
   const visited = []
   const pathlist = []
+  const allpaths = []
 
-  _all_paths(istart,iend,visited,pathlist,roads)
+  _all_paths(istart,iend,visited,pathlist,roads,allpaths)
+
+
+  const distinct = [...new Set(allpaths)]
+  distinct.forEach(row => {
+    row.unshift(istart)
+  })
+
+  console.log("allpaths",istart,"to",iend,[...new Set(allpaths)])
 }
 
-const _all_paths = (ifrom,ifinish,visited,pathlist,roads)=>{
+const _all_paths = (ifrom,ifinish,visited,pathlist,roads,allpaths)=>{
   visited.push(ifrom)
 
   if(ifrom == ifinish){
-    console.log(pathlist)
+    const row = []
+    //console.log("pathlist",pathlist)
+    pathlist.forEach(inode =>{
+      row.push(inode)
+      allpaths.push(row)
+    })
   }
 
   const childs = _get_not_visited(ifrom,roads,visited)
+
   childs.forEach(xnode => {
     pathlist.push(xnode)
-    _all_paths(xnode,ifinish,visited,pathlist,roads)
+    _all_paths(xnode,ifinish,visited,pathlist,roads,allpaths)
     const irmv = pathlist.indexOf(xnode)
+    //elimina 1 elemento en la pos: irmv
     pathlist.splice(irmv,1)
   })
 
@@ -153,6 +169,26 @@ const bfs = (roads,ifrom)=>{
   console.table(padre)
 }
 
+const bfs2 = (roads,ifrom)=>{
+  const queue = []
+  const visited = []
+  const levels = []
+
+  visited.push(ifrom)
+  queue.push(ifrom)
+  while (queue.length!=0){
+    const inode = queue.pop()
+    
+    const notvisited = _get_not_visited(inode,roads,visited)
+    levels.push({parent:inode,childs:notvisited})
+    notvisited.forEach(xnode => {
+      visited.push(xnode)
+      queue.push(xnode)
+    })
+  }
+  //console.table(visited)
+  //console.log(levels)
+}
 
 //hay arista
 const _is_edge = (istart,iend,roads)=>{
@@ -208,6 +244,33 @@ const _get_product = (m1,m2)=>{
   return newmat
 }
 
+const _get_sum = (m1,m2) => {
+  let newmat = []
+  const ilenm1 = m1.length
+  const ilenm2 = m2.length
+
+  if(ilenm1 == ilenm2 && ilenm1>0){
+    m1.forEach((row,i)=>{
+      const tmprow = []
+      row.forEach((col,j)=>{
+        const sum = col + m2[i][j]
+        tmprow.push(sum)
+      })
+      newmat.push(tmprow)
+    })
+  }
+  return newmat
+}//_get_sum
+
+const _get_mat_mult = (m1,iprod)=>{
+  let result = m1
+  for(let i=0; i<(iprod-1); i++){
+    result = _get_sum(result,m1)
+  }
+  console.table(result)
+  return result
+}
+
 const _get_mat_potency = (m1,iexp)=>{
   if(iexp==0) return 1
   if(iexp==1) return m1
@@ -215,21 +278,36 @@ const _get_mat_potency = (m1,iexp)=>{
   for(let i=0; i<(iexp-1); i++){
     result = _get_product(result,m1)
   }
-  console.log("_get_mat_potency",iexp)
-  console.table(result)
+  //console.log("_get_mat_potency",iexp)
+  //console.table(result)
   return result
 }
 
 const _get_num_roads = (inodes,roads,istart,ifinish)=>{
   const adjmatrix = _get_adyacency(roads)
+  console.log("adjacency")
+  console.table(adjmatrix)
   const resmat = _get_mat_potency(adjmatrix,inodes)
+  console.log("math potency",inodes)
+  console.table(resmat)
   const total = resmat[istart][ifinish]
   console.log("total roads",total)
+
+  const pathmat = _get_mat_mult(resmat,total)
+  console.log("pathmath:")
+  console.table(pathmat)
   return total
 }
 
 const istart = 0, iend = 4
 const aradjacen = _get_adyacency(roads)
-console.table(aradjacen)
+//console.table(aradjacen)
 //dfs(istart,iend,roads)
-bfs(roads,istart)
+dfs(0,4,roads)
+dfs(1,4,roads)
+dfs(2,4,roads)
+dfs(3,4,roads)
+//bfs2(roads,istart)
+
+//_get_mat_mult([[1]],2)
+//_get_num_roads(3,roads,istart,iend)
