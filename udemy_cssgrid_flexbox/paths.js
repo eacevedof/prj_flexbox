@@ -153,8 +153,21 @@ const _left_join = (ar1,ar2)=>{
   return join
 }
 
+const _has_capicua = (row)=>{
+  console.log(row)
+  for(let i=0; i<row.length-2; i=i+2){
+    let ip1 = i+1
+    let ip2 = i+2
+    let ip3 = i+3
+    //console.log(i,ip1,ip2,ip3)
+    if(row[i]==row[ip3] && row[ip1]==row[ip2] && row[i]!=-1) 
+      return true
+  }
+  return false
+}
+
 const _get_paths = roads => {
-  const from = 3
+  const from = 0
   const to = 4
   const visited = []
   
@@ -193,6 +206,8 @@ const _get_paths = roads => {
   console.table(ar1234)
   const ar12345 = _left_join(ar1234,ar5)
   console.table(ar12345)
+  const noloops = ar12345.filter(row => !_has_capicua(row))
+  console.table(noloops)
 
 }// _get_paths
 
