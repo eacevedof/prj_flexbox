@@ -88,8 +88,8 @@ const _get_count = (vertix,rows) =>{
 }
 
 const _get_paths = roads => {
-  const from = 0
-  const to = 4
+  const from = 1
+  const to = 3
   const visited = []
   
   const raw = _get_rawmatrix(roads)
@@ -189,6 +189,26 @@ const _get_paths = roads => {
     })
   })
   console.log("ar5",ar5)
+
+  ends = [...new Set(_get_ends(ar5).filter(iend => iend<to))]
+  console.log("ends3")
+  console.table(ends)
+
+  const ar6 = []
+  ends.forEach((xnode)=>{
+    const artmp = _get_nodes(xnode,raw)
+    artmp.forEach(vertix => {
+      const ivis = _get_count(vertix, visited)
+      //console.log(vertix,ivis)
+      if(!_in_array(vertix,visited) || 
+        (_in_array(vertix,visited) && _has_destiny(vertix,to)) 
+        || (_in_array(vertix,visited) && _in_array(vertix,loops) && ivis<2)){
+        ar6.push(vertix)
+        visited.push(vertix)
+      }
+    })
+  })
+  console.log("ar6",ar6)
 
 }// _get_paths
 
