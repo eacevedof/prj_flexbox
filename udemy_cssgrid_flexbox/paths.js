@@ -223,11 +223,19 @@ const _get_min_route = (obj)=>{
   }
 }
 
+const _merge_levels = (arlevels)=>{
+  const ar01 = _left_join(arlevels[0], arlevels[1]||[] )
+  const ar012 = _left_join(ar01, arlevels[2]||[] )
+  const ar0123 = _left_join(ar012, arlevels[3]||[] )
+  const ar01234 = _left_join(ar0123, arlevels[4]||[] )  
+  return ar01234
+}
+
 //================================
 //================================
-const _get_paths = roads => {
-  const from = 2
-  const to = 4
+const _get_paths = (roads,from=0,to=4) => {
+  //const from = 2
+  //const to = 4
   const visited = []
   
   const raw = _get_rawmatrix(roads)
@@ -248,26 +256,49 @@ const _get_paths = roads => {
     if(artmp.length>0)
       arlevels[i+1] = artmp
   }
- 
-  const ar01 = _left_join(arlevels[0], arlevels[1]||[] )
-  const ar012 = _left_join(ar01, arlevels[2]||[] )
-  const ar0123 = _left_join(ar012, arlevels[3]||[] )
-  const ar01234 = _left_join(ar0123, arlevels[4]||[] )
-  console.table(ar01234)
-  const noloops = ar01234.filter(row => !_has_capicua(row))
-  console.table(noloops)
 
+  const armerged = _merge_levels(arlevels)
+  //quito las rutas con loops
+  const noloops = armerged.filter(row => !_has_capicua(row))
+  //me quedo con las rutas que tienen el destino "to"
   const onlyend = noloops.filter(row => {
     const arpath = row.filter(val => val!=-1)
     return arpath[arpath.length-1] == to
   })
 
-  //console.log("from",from,"to",to)
-  //console.table(onlyend)
-  const time = _get_obj_time(onlyend,roads)
-  console.log(time)
-  const minroute = _get_min_route(time)
-  console.log(minroute)
+  console.log("onlyend")
+  console.table(onlyend)
+  return onlyend
+
 }// _get_paths
 
-_get_paths(roads)
+const _get_msg = (objtime) => {
+  console.log(objtime)
+  const msg = `[0, 1, 3, 2, 4]. Tiempo más rápido is 5 + 2 + 2 + 5 = 14 minutes`
+}
+
+//navigate(5, roads, 0, 4);
+const navigate = (inodes, roads, from, to) =>{
+  const allpaths = _get_paths(roads,from,to)
+
+  const onlyinodes = allpaths.filter(row => {
+    const ilen = (row.filter(xnode => xnode!=-1).length/2)+1
+    return ilen==inodes
+  })
+
+  if(onlyinodes.length==0)
+    return null
+
+  console.log("onlyinodes")
+  console.table(onlyinodes)
+
+  const objtime = _get_obj_time(onlyinodes,roads)
+  objtime.minroute = _get_min_route(objtime)
+
+  const msg = _get_msg(objtime)
+
+  //const msg = `devolvería [0, 1, 3, 2, 4]. Tiempo más rápido is 5 + 2 + 2 + 5 = 14 minutes`
+  return msg
+}
+
+console.log(navigate(3,roads,0,4))
