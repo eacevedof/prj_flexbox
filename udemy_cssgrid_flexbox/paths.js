@@ -154,7 +154,7 @@ const _left_join = (ar1,ar2)=>{
 }
 
 const _has_capicua = (row)=>{
-  console.log(row)
+  //console.log(row)
   for(let i=0; i<row.length-2; i=i+2){
     let ip1 = i+1
     let ip2 = i+2
@@ -166,48 +166,50 @@ const _has_capicua = (row)=>{
   return false
 }
 
+const _is_node = (inode,raw)=>{
+  const ilen = raw.filter(row => row[0]==inode || row[1]==inode).length
+  return ilen>0
+}
+
 const _get_paths = roads => {
-  const from = 0
-  const to = 4
+  const from = 1
+  const to = 5
   const visited = []
   
   const raw = _get_rawmatrix(roads)
-  //console.log("raw")
-  //console.table(raw)
+  if(!_is_node(from,raw) || !_is_node(to,raw))
+    return []
 
   const loops = _get_loops(raw)
-  //console.log("loops")
-  //console.table(loops)
 
-  const ar1 = _get_nodes(from, raw)
-  //console.log("ar1",ar1)
-  _ar_copy(ar1, visited)
- 
-  const ar2 = _get_arlevel(ar1,raw,to,visited,loops)
-  const ar3 = _get_arlevel(ar2,raw,to,visited,loops)
-  const ar4 = _get_arlevel(ar3,raw,to,visited,loops)
-  const ar5 = _get_arlevel(ar4,raw,to,visited,loops)
-
-  console.log("ar1")
-  console.table(ar1)
-  console.log("ar2")
-  console.table(ar2)
-  console.log("ar3")
-  console.table(ar3)
-  console.log("ar4")
-  console.table(ar4)
-  console.log("ar5")
-  console.table(ar5)
+  const arlevels = []
+  arlevels.push(_get_nodes(from, raw))
+  _ar_copy(arlevels[0], visited)
   
-  const ar12 = _left_join(ar1,ar2)
-  const ar123 = _left_join(ar12,ar3)
-  console.table(ar123)
-  const ar1234 = _left_join(ar123,ar4)
-  console.table(ar1234)
-  const ar12345 = _left_join(ar1234,ar5)
-  console.table(ar12345)
-  const noloops = ar12345.filter(row => !_has_capicua(row))
+  for(let i=0; i<5; i++){
+    const arlevi = arlevels[i] || []
+    if(arlevi.length==0)
+      break
+    const artmp = _get_arlevel(arlevi,raw,to,visited,loops)
+    if(artmp.length>0)
+      arlevels[i+1] = artmp
+  }
+  
+  //console.table(arlevels)
+  //return
+
+  const ar01 = _left_join(arlevels[0], arlevels[1]||[] )
+  const ar012 = _left_join(ar01, arlevels[2]||[] )
+  const ar0123 = _left_join(ar012, arlevels[3]||[] )
+  const ar01234 = _left_join(ar0123, arlevels[4]||[] )
+  console.table(ar01234)
+  const noloops = ar01234.filter(row => !_has_capicua(row))
   console.table(noloops)
+  const onlyend = noloops.filter(row => {
+    const arpath = row.filter(val => val!=-1)
+    return arpath[arpath.length-1]==to
+  })
+  console.table(onlyend)
 
 }// _get_paths
 
