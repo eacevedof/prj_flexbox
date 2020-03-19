@@ -211,15 +211,27 @@ const _get_obj_time = (paths, roads)=>{
     }
 }
 
+const _get_min_route = (obj)=>{
+  const mins = []
+  obj.times.forEach(row => {
+    mins.push(row[row.length-1])
+  })
+  const imin = mins.indexOf(Math.min(...mins))
+  return {
+    i:imin,
+    time:mins[imin]
+  }
+}
+
 //================================
 //================================
 const _get_paths = roads => {
-  const from = 0
-  const to = 2
+  const from = 2
+  const to = 4
   const visited = []
   
   const raw = _get_rawmatrix(roads)
-  if(!(_is_node(from,raw) && _is_node(to,raw)))
+  if(!(_is_node(from,raw) && _is_node(to,raw))|| to<from)
     return []
 
   const loops = _get_loops(raw)
@@ -244,15 +256,18 @@ const _get_paths = roads => {
   console.table(ar01234)
   const noloops = ar01234.filter(row => !_has_capicua(row))
   console.table(noloops)
+
   const onlyend = noloops.filter(row => {
     const arpath = row.filter(val => val!=-1)
     return arpath[arpath.length-1] == to
   })
-  console.log("from",from,"to",to)
-  console.table(onlyend)
+
+  //console.log("from",from,"to",to)
+  //console.table(onlyend)
   const time = _get_obj_time(onlyend,roads)
   console.log(time)
-
+  const minroute = _get_min_route(time)
+  console.log(minroute)
 }// _get_paths
 
 _get_paths(roads)
