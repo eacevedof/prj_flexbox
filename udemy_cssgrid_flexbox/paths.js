@@ -87,128 +87,58 @@ const _get_count = (vertix,rows) =>{
   return count
 }
 
+const _get_arlevel = (arxprev,raw,to,visited,loops)=>{
+  const ends = [...new Set(_get_ends(arxprev).filter(iend => iend<to))]
+  console.log("endsx")
+  console.table(ends)
+  
+  const arlevel = []
+  ends.forEach((xnode)=>{
+    const artmp = _get_nodes(xnode,raw)
+    artmp.forEach(vertix => {
+      const ivis = _get_count(vertix, visited)
+      //console.log(vertix,ivis)
+      if(!_in_array(vertix,visited) || 
+        (_in_array(vertix,visited) && _has_destiny(vertix,to)) 
+        || (_in_array(vertix,visited) && _in_array(vertix,loops) && ivis<2)){
+        if(vertix[1]<=to)
+          arlevel.push(vertix)
+        visited.push(vertix)
+      }
+    })
+  })
+
+  return arlevel
+}
+
 const _get_paths = roads => {
-  const from = 1
-  const to = 3
+  const from = 0
+  const to = 4
   const visited = []
   
   const raw = _get_rawmatrix(roads)
-  console.log("raw")
-  console.table(raw)
+  //console.log("raw")
+  //console.table(raw)
 
   const loops = _get_loops(raw)
-  console.log("loops")
-  console.table(loops)
+  //console.log("loops")
+  //console.table(loops)
 
   const ar1 = _get_nodes(from,raw)
   console.log("ar1",ar1)
   _ar_copy(ar1,visited)
+ 
+  const ar2 = _get_arlevel(ar1,raw,to,visited,loops)
+  const ar3 = _get_arlevel(ar2,raw,to,visited,loops)
+  const ar4 = _get_arlevel(ar3,raw,to,visited,loops)
+  const ar5 = _get_arlevel(ar4,raw,to,visited,loops)
 
-  //console.log("visited")
-  //console.table(visited)
-
-  let ends = [...new Set(_get_ends(ar1).filter(iend => iend<to))]
-  console.log("ends1")
-  console.table(ends)
-  
-  const ar2 = []
-  ends.forEach((xnode)=>{
-    const artmp = _get_nodes(xnode,raw)
-    artmp.forEach(vertix => {
-      const ivis = _get_count(vertix, visited)
-      //console.log(vertix,ivis)
-      if(!_in_array(vertix,visited) || 
-        (_in_array(vertix,visited) && _has_destiny(vertix,to)) 
-        || (_in_array(vertix,visited) && _in_array(vertix,loops) && ivis<2)){
-        ar2.push(vertix)
-        visited.push(vertix)
-      }
-    })
-    //_ar_copy(artmp,ar2)
-  })
+  console.log("ar1",ar1)
   console.log("ar2",ar2)
-
-  ends = [...new Set(_get_ends(ar2).filter(iend => iend<to))]
-  console.log("ends2")
-  console.table(ends)
-  
-  const ar3 = []
-  ends.forEach((xnode)=>{
-    const artmp = _get_nodes(xnode,raw)
-    artmp.forEach(vertix => {
-      const ivis = _get_count(vertix, visited)
-      //console.log(vertix,ivis)
-      if(!_in_array(vertix,visited) || 
-        (_in_array(vertix,visited) && _has_destiny(vertix,to)) 
-        || (_in_array(vertix,visited) && _in_array(vertix,loops) && ivis<2)){
-        ar3.push(vertix)
-        visited.push(vertix)
-      }
-    })
-    //_ar_copy(artmp,ar3)
-  })
   console.log("ar3",ar3)
-
-  ends = [...new Set(_get_ends(ar3).filter(iend => iend<to))]
-  console.log("ends3")
-  console.table(ends)
-
-  const ar4 = []
-  ends.forEach((xnode)=>{
-    const artmp = _get_nodes(xnode,raw)
-    artmp.forEach(vertix => {
-      const ivis = _get_count(vertix, visited)
-      //console.log(vertix,ivis)
-      if(!_in_array(vertix,visited) || 
-        (_in_array(vertix,visited) && _has_destiny(vertix,to)) 
-        || (_in_array(vertix,visited) && _in_array(vertix,loops) && ivis<2)){
-        ar4.push(vertix)
-        visited.push(vertix)
-      }
-    })
-    //_ar_copy(artmp,ar4)
-  })
-  console.log("ar4",ar4)  
-
-  ends = [...new Set(_get_ends(ar4).filter(iend => iend<to))]
-  console.log("ends3")
-  console.table(ends)
-
-  const ar5 = []
-  ends.forEach((xnode)=>{
-    const artmp = _get_nodes(xnode,raw)
-    artmp.forEach(vertix => {
-      const ivis = _get_count(vertix, visited)
-      //console.log(vertix,ivis)
-      if(!_in_array(vertix,visited) || 
-        (_in_array(vertix,visited) && _has_destiny(vertix,to)) 
-        || (_in_array(vertix,visited) && _in_array(vertix,loops) && ivis<2)){
-        ar5.push(vertix)
-        visited.push(vertix)
-      }
-    })
-  })
+  console.log("ar4",ar4)
   console.log("ar5",ar5)
-
-  ends = [...new Set(_get_ends(ar5).filter(iend => iend<to))]
-  console.log("ends3")
-  console.table(ends)
-
-  const ar6 = []
-  ends.forEach((xnode)=>{
-    const artmp = _get_nodes(xnode,raw)
-    artmp.forEach(vertix => {
-      const ivis = _get_count(vertix, visited)
-      //console.log(vertix,ivis)
-      if(!_in_array(vertix,visited) || 
-        (_in_array(vertix,visited) && _has_destiny(vertix,to)) 
-        || (_in_array(vertix,visited) && _in_array(vertix,loops) && ivis<2)){
-        ar6.push(vertix)
-        visited.push(vertix)
-      }
-    })
-  })
-  console.log("ar6",ar6)
+  
 
 }// _get_paths
 
