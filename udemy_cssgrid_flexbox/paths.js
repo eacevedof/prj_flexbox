@@ -171,13 +171,55 @@ const _is_node = (inode,raw)=>{
   return ilen>0
 }
 
+const _get_time = (from,to,roads)=>{
+  const time = roads.filter(obj => obj.from == from && obj.to ==to)
+  if(time.length>0)
+    return time[0].drivingTime
+  return 0
+}
+
+const _get_obj_time = (paths, roads)=>{
+  //console.table(roads)
+  //return
+  const unique = []
+  paths.forEach(row => {
+    const tmprow = []
+    row.forEach(val => {
+      if(!tmprow.includes(val) && val!=-1)
+        tmprow.push(val)
+    })
+    unique.push(tmprow)
+  })
+
+  //console.table(unique)
+  //return
+  const times = []
+  unique.forEach(row => {
+    
+    const values = []
+    row.forEach((nodex,i) => {
+      values.push(_get_time(nodex,row[i+1] || -1,roads))      
+    })
+    const sum = values.reduce((ac,time)=> ac+time)
+    values.push(sum)
+    times.push(values.filter(time => time!=0))
+  })
+
+  return {
+      nodes: unique,
+      times
+    }
+}
+
+//================================
+//================================
 const _get_paths = roads => {
-  const from = 1
-  const to = 5
+  const from = 0
+  const to = 2
   const visited = []
   
   const raw = _get_rawmatrix(roads)
-  if(!_is_node(from,raw) || !_is_node(to,raw))
+  if(!(_is_node(from,raw) && _is_node(to,raw)))
     return []
 
   const loops = _get_loops(raw)
@@ -194,10 +236,7 @@ const _get_paths = roads => {
     if(artmp.length>0)
       arlevels[i+1] = artmp
   }
-  
-  //console.table(arlevels)
-  //return
-
+ 
   const ar01 = _left_join(arlevels[0], arlevels[1]||[] )
   const ar012 = _left_join(ar01, arlevels[2]||[] )
   const ar0123 = _left_join(ar012, arlevels[3]||[] )
@@ -207,9 +246,12 @@ const _get_paths = roads => {
   console.table(noloops)
   const onlyend = noloops.filter(row => {
     const arpath = row.filter(val => val!=-1)
-    return arpath[arpath.length-1]==to
+    return arpath[arpath.length-1] == to
   })
+  console.log("from",from,"to",to)
   console.table(onlyend)
+  const time = _get_obj_time(onlyend,roads)
+  console.log(time)
 
 }// _get_paths
 
