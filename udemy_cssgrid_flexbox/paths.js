@@ -305,3 +305,4 @@ const navigate = (inodes, roads, from, to) => {
 }
 
 console.log(navigate(4,roads,0,4))
+console.log(navigate(4,roads,0,0))
