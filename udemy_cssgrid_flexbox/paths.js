@@ -47,19 +47,27 @@ const roads = [
 	{from: 3, to: 4, drivingTime: 10}
 ]
 
-
 const _get_rawmatrix = (roads) => roads.map(obj => [obj.from,obj.to])
+
+const _in_array = (ar1,ar2) => {
+  const ilen = ar2.filter( (vertix,i,arx) => (vertix[0]==ar1[0] && vertix[1] == ar1[1])).length
+  //console.log(ar1,ar2,ilen)
+  return ilen>0
+}
+
 const _get_loops = (raw)=>{
-  const loops =  raw.filter(vertix => raw.includes(vertix) && raw.includes(vertix.reverse()))
+  const loops = raw.filter( vertix =>{
+    return _in_array(vertix,raw) && _in_array([vertix[1],vertix[0]],raw)
+  })
   return loops
 }
 
 //const raw = _get_rawmatrix(roads)
 //console.log("raw",raw)
 
-const _get_nodes = (ifrom,raw) => raw.filter(row => row[0]==ifrom)
+const _get_nodes = (ifrom,raw) => raw.filter(row => row[0]==ifrom).sort()
 
-const _get_ends = (nodes) => nodes.map(ar => ar[1])
+const _get_ends = (nodes) => nodes.map(ar => ar[1]).sort()
 
 const _ar_copy = (org,dest) => {
   org.forEach(ar => {
@@ -68,9 +76,20 @@ const _ar_copy = (org,dest) => {
   })
 }
 
-const _get_paths = (roads) => {
-  const from = 1
-  const to = 3
+const _has_destiny = (vertix,dest) => vertix[1] == dest
+
+const _get_count = (vertix,rows) =>{
+  const count = rows.reduce((ac,item)=>{
+    if(item[0] == vertix[0] && item[1] == vertix[1])
+      return ac + 1
+    return ac + 0
+  },0)
+  return count
+}
+
+const _get_paths = roads => {
+  const from = 0
+  const to = 4
   const visited = []
   
   const raw = _get_rawmatrix(roads)
@@ -82,16 +101,95 @@ const _get_paths = (roads) => {
   console.table(loops)
 
   const ar1 = _get_nodes(from,raw)
-  console.log("ar1")
-  console.table(ar1)
+  console.log("ar1",ar1)
   _ar_copy(ar1,visited)
 
-  const ends = _get_ends(ar1)
-  console.log("ends")
+  //console.log("visited")
+  //console.table(visited)
+
+  let ends = [...new Set(_get_ends(ar1).filter(iend => iend<to))]
+  console.log("ends1")
   console.table(ends)
   
+  const ar2 = []
+  ends.forEach((xnode)=>{
+    const artmp = _get_nodes(xnode,raw)
+    artmp.forEach(vertix => {
+      const ivis = _get_count(vertix, visited)
+      //console.log(vertix,ivis)
+      if(!_in_array(vertix,visited) || 
+        (_in_array(vertix,visited) && _has_destiny(vertix,to)) 
+        || (_in_array(vertix,visited) && _in_array(vertix,loops) && ivis<2)){
+        ar2.push(vertix)
+        visited.push(vertix)
+      }
+    })
+    //_ar_copy(artmp,ar2)
+  })
+  console.log("ar2",ar2)
 
+  ends = [...new Set(_get_ends(ar2).filter(iend => iend<to))]
+  console.log("ends2")
+  console.table(ends)
+  
+  const ar3 = []
+  ends.forEach((xnode)=>{
+    const artmp = _get_nodes(xnode,raw)
+    artmp.forEach(vertix => {
+      const ivis = _get_count(vertix, visited)
+      //console.log(vertix,ivis)
+      if(!_in_array(vertix,visited) || 
+        (_in_array(vertix,visited) && _has_destiny(vertix,to)) 
+        || (_in_array(vertix,visited) && _in_array(vertix,loops) && ivis<2)){
+        ar3.push(vertix)
+        visited.push(vertix)
+      }
+    })
+    //_ar_copy(artmp,ar3)
+  })
+  console.log("ar3",ar3)
 
-}
+  ends = [...new Set(_get_ends(ar3).filter(iend => iend<to))]
+  console.log("ends3")
+  console.table(ends)
+
+  const ar4 = []
+  ends.forEach((xnode)=>{
+    const artmp = _get_nodes(xnode,raw)
+    artmp.forEach(vertix => {
+      const ivis = _get_count(vertix, visited)
+      //console.log(vertix,ivis)
+      if(!_in_array(vertix,visited) || 
+        (_in_array(vertix,visited) && _has_destiny(vertix,to)) 
+        || (_in_array(vertix,visited) && _in_array(vertix,loops) && ivis<2)){
+        ar4.push(vertix)
+        visited.push(vertix)
+      }
+    })
+    //_ar_copy(artmp,ar4)
+  })
+  console.log("ar4",ar4)  
+
+  ends = [...new Set(_get_ends(ar4).filter(iend => iend<to))]
+  console.log("ends3")
+  console.table(ends)
+
+  const ar5 = []
+  ends.forEach((xnode)=>{
+    const artmp = _get_nodes(xnode,raw)
+    artmp.forEach(vertix => {
+      const ivis = _get_count(vertix, visited)
+      //console.log(vertix,ivis)
+      if(!_in_array(vertix,visited) || 
+        (_in_array(vertix,visited) && _has_destiny(vertix,to)) 
+        || (_in_array(vertix,visited) && _in_array(vertix,loops) && ivis<2)){
+        ar5.push(vertix)
+        visited.push(vertix)
+      }
+    })
+  })
+  console.log("ar5",ar5)
+
+}// _get_paths
 
 _get_paths(roads)
