@@ -89,8 +89,8 @@ const _get_count = (vertix,rows) =>{
 
 const _get_arlevel = (arxprev,raw,to,visited,loops)=>{
   const ends = [...new Set(_get_ends(arxprev).filter(iend => iend<to))]
-  console.log("endsx")
-  console.table(ends)
+  //console.log("endsx")
+  //console.table(ends)
   
   const arlevel = []
   ends.forEach((xnode)=>{
@@ -111,8 +111,50 @@ const _get_arlevel = (arxprev,raw,to,visited,loops)=>{
   return arlevel
 }
 
+const _left_join = (ar1,ar2)=>{
+  const join = []
+
+  const _in_col0 = (val,ar2)=>{
+    const ilen = ar2.filter(row => row[0]==val).length
+    return ilen>0
+  }
+
+  ar1.forEach((row1,i)=>{
+    const ilen = row1.length-1
+    const ilast = row1[ilen]
+
+    if(_in_col0(ilast,ar2)){
+      ar2.forEach((row2,j)=>{
+        if(ilast == row2[0]){
+          const tmprow = []
+          row1.forEach((v1)=>{
+            tmprow.push(v1)
+          })
+          row2.forEach(v2 => {
+            //if(!tmprow.includes(v2))
+            tmprow.push(v2)
+          })
+          join.push(tmprow)
+        }
+      })//foreach ar2
+    }
+    //si no tiene pareja
+    else{
+      const tmprow = []
+      row1.forEach((v1)=>{
+        tmprow.push(v1)
+      })
+      tmprow.push(-1)
+      tmprow.push(-1)
+      join.push(tmprow)
+    }
+    
+  })//foreach ar1
+  return join
+}
+
 const _get_paths = roads => {
-  const from = 0
+  const from = 3
   const to = 4
   const visited = []
   
@@ -124,21 +166,33 @@ const _get_paths = roads => {
   //console.log("loops")
   //console.table(loops)
 
-  const ar1 = _get_nodes(from,raw)
-  console.log("ar1",ar1)
-  _ar_copy(ar1,visited)
+  const ar1 = _get_nodes(from, raw)
+  //console.log("ar1",ar1)
+  _ar_copy(ar1, visited)
  
   const ar2 = _get_arlevel(ar1,raw,to,visited,loops)
   const ar3 = _get_arlevel(ar2,raw,to,visited,loops)
   const ar4 = _get_arlevel(ar3,raw,to,visited,loops)
   const ar5 = _get_arlevel(ar4,raw,to,visited,loops)
 
-  console.log("ar1",ar1)
-  console.log("ar2",ar2)
-  console.log("ar3",ar3)
-  console.log("ar4",ar4)
-  console.log("ar5",ar5)
+  console.log("ar1")
+  console.table(ar1)
+  console.log("ar2")
+  console.table(ar2)
+  console.log("ar3")
+  console.table(ar3)
+  console.log("ar4")
+  console.table(ar4)
+  console.log("ar5")
+  console.table(ar5)
   
+  const ar12 = _left_join(ar1,ar2)
+  const ar123 = _left_join(ar12,ar3)
+  console.table(ar123)
+  const ar1234 = _left_join(ar123,ar4)
+  console.table(ar1234)
+  const ar12345 = _left_join(ar1234,ar5)
+  console.table(ar12345)
 
 }// _get_paths
 
