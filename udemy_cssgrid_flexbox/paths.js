@@ -49,34 +49,48 @@ const roads = [
 
 
 const _get_rawmatrix = (roads) => roads.map(obj => [obj.from,obj.to])
-const _is_loop = (vertix, raw)=>{
-  return raw.includes(vertix) && raw.includes(vertix.reverse())
+const _get_loops = (raw)=>{
+  const loops =  raw.filter(vertix => raw.includes(vertix) && raw.includes(vertix.reverse()))
+  return loops
 }
 
-const raw = _get_rawmatrix(roads)
-console.log("raw",raw)
+//const raw = _get_rawmatrix(roads)
+//console.log("raw",raw)
 
 const _get_nodes = (ifrom,raw) => raw.filter(row => row[0]==ifrom)
 
 const _get_ends = (nodes) => nodes.map(ar => ar[1])
 
+const _ar_copy = (org,dest) => {
+  org.forEach(ar => {
+    if(! dest.includes(ar))
+      dest.push(ar)
+  })
+}
+
 const _get_paths = (roads) => {
   const from = 1
   const to = 3
-
+  const visited = []
+  
   const raw = _get_rawmatrix(roads)
   console.log("raw")
   console.table(raw)
 
+  const loops = _get_loops(raw)
+  console.log("loops")
+  console.table(loops)
+
   const ar1 = _get_nodes(from,raw)
   console.log("ar1")
   console.table(ar1)
+  _ar_copy(ar1,visited)
 
   const ends = _get_ends(ar1)
   console.log("ends")
   console.table(ends)
   
-  
+
 
 }
 
