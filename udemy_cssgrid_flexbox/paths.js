@@ -224,7 +224,8 @@ const _get_min_route = (obj)=>{
 }
 
 const _merge_levels = (arlevels)=>{
-  const ar01 = _left_join(arlevels[0], arlevels[1]||[] )
+  const ar0 = arlevels[0]
+  const ar01 = _left_join(ar0, arlevels[1]||[] )
   const ar012 = _left_join(ar01, arlevels[2]||[] )
   const ar0123 = _left_join(ar012, arlevels[3]||[] )
   const ar01234 = _left_join(ar0123, arlevels[4]||[] )  
@@ -273,12 +274,15 @@ const _get_paths = (roads,from=0,to=4) => {
 }// _get_paths
 
 const _get_msg = (objtime) => {
-  console.log(objtime)
-  const msg = `[0, 1, 3, 2, 4]. Tiempo más rápido is 5 + 2 + 2 + 5 = 14 minutes`
+  //console.log(objtime)
+  const ipath = objtime.minroute.i
+  const sum = objtime.times[ipath].pop()
+  const msg = `[${objtime.nodes[ipath].join(", ")}]. Tiempo más rápido is ${objtime.times[ipath].join(" + ")} = ${sum} minutes`
+  return msg
 }
 
 //navigate(5, roads, 0, 4);
-const navigate = (inodes, roads, from, to) =>{
+const navigate = (inodes, roads, from, to) => {
   const allpaths = _get_paths(roads,from,to)
 
   const onlyinodes = allpaths.filter(row => {
@@ -294,11 +298,10 @@ const navigate = (inodes, roads, from, to) =>{
 
   const objtime = _get_obj_time(onlyinodes,roads)
   objtime.minroute = _get_min_route(objtime)
-
+  console.log(objtime)
   const msg = _get_msg(objtime)
-
-  //const msg = `devolvería [0, 1, 3, 2, 4]. Tiempo más rápido is 5 + 2 + 2 + 5 = 14 minutes`
+  //console.log("msg",msg)
   return msg
 }
 
-console.log(navigate(3,roads,0,4))
+console.log(navigate(4,roads,0,4))
