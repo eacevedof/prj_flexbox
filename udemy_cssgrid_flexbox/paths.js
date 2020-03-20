@@ -240,7 +240,7 @@ const _get_paths = (roads,from=0,to=4) => {
   const visited = []
   
   const raw = _get_rawmatrix(roads)
-  if(!(_is_node(from,raw) && _is_node(to,raw))|| to<from)
+  if(!(_is_node(from,raw) && _is_node(to,raw)))
     return []
 
   const loops = _get_loops(raw)
@@ -309,6 +309,8 @@ const navigate = (inodes, roads, from, to) => {
 }
 
 console.log(navigate(5,roads,0,4))
+console.log(navigate(1,roads,2,3))
+console.log(navigate(1,roads,3,2))
 // console.log(navigate(4,roads,0,4))
 // console.log(navigate(4,roads,0,0))
 // console.log(navigate(2,roads,1,4))
