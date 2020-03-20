@@ -267,8 +267,8 @@ const _get_paths = (roads,from=0,to=4) => {
     return arpath[arpath.length-1] == to
   })
 
-  console.log("onlyend")
-  console.table(onlyend)
+  //console.log("onlyend")
+  //console.table(onlyend)
   return onlyend
 
 }// _get_paths
@@ -283,22 +283,26 @@ const _get_msg = (objtime) => {
 
 //navigate(5, roads, 0, 4);
 const navigate = (inodes, roads, from, to) => {
+  console.log("from:",from,"to:",to,"nodes:",inodes)
   const allpaths = _get_paths(roads,from,to)
+  console.log("allpaths")
+  console.table(allpaths)
 
   const onlyinodes = allpaths.filter(row => {
     const ilen = (row.filter(xnode => xnode!=-1).length/2)+1
+    console.log("num nodes found:",ilen)
     return ilen==inodes
   })
 
   if(onlyinodes.length==0)
     return null
 
-  console.log("onlyinodes")
-  console.table(onlyinodes)
+  //console.log("onlyinodes")
+  //console.table(onlyinodes)
 
   const objtime = _get_obj_time(onlyinodes,roads)
   objtime.minroute = _get_min_route(objtime)
-  console.log(objtime)
+  //console.log(objtime)
   const msg = _get_msg(objtime)
   //console.log("msg",msg)
   return msg
@@ -306,3 +310,5 @@ const navigate = (inodes, roads, from, to) => {
 
 console.log(navigate(4,roads,0,4))
 console.log(navigate(4,roads,0,0))
+console.log(navigate(2,roads,1,4))
+console.log(navigate(3,roads,1,4))
