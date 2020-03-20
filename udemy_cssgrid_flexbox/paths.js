@@ -258,7 +258,9 @@ const _get_paths = (roads,from=0,to=4) => {
       arlevels[i+1] = artmp
   }
 
+  //console.log(arlevels)
   const armerged = _get_merged_levels(arlevels)
+  //console.table(armerged)
   //quito las rutas con loops
   const noloops = armerged.filter(row => !_has_capicua(row))
   //me quedo con las rutas que tienen el destino "to"
@@ -308,9 +310,9 @@ const navigate = (inodes, roads, from, to) => {
   return msg
 }
 
-console.log(navigate(5,roads,0,4))
-console.log(navigate(1,roads,2,3))
-console.log(navigate(1,roads,3,2))
+//console.log(navigate(5,roads,0,4))
+console.log(navigate(2,roads,2,3))
+console.log(navigate(2,roads,3,2))
 // console.log(navigate(4,roads,0,4))
 // console.log(navigate(4,roads,0,0))
 // console.log(navigate(2,roads,1,4))
