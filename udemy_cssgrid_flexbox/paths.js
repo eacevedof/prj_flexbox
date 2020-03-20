@@ -36,6 +36,7 @@
 	// devolvería [0, 1, 3, 2, 4]. Tiempo más rápido is 5 + 2 + 2 + 5 = 14 minutes
 
 */
+
 const roads = [
 	{from: 0, to: 1, drivingTime: 5},
 	{from: 0, to: 2, drivingTime: 10},
@@ -45,7 +46,7 @@ const roads = [
 	{from: 2, to: 4, drivingTime: 5},
 	{from: 3, to: 2, drivingTime: 2},
 	{from: 3, to: 4, drivingTime: 10}
-]
+];
 
 const _get_rawmatrix = (roads) => roads.map(obj => [obj.from,obj.to])
 
@@ -283,17 +284,19 @@ const _get_msg = (objtime) => {
   return msg
 }
 
+
 //navigate(5, roads, 0, 4);
-const navigate = (inodes, roads, from, to) => {
-  //console.log("from:",from,"to:",to,"nodes:",inodes)
-  const allpaths = _get_paths(roads,from,to)
+//export default function navigate(numberOfIntersections, roads, start, finish) {
+function navigate(numberOfIntersections, roads, start, finish) {
+  //console.log("start:",start,"finish:",finish,"numberOfIntersections:",numberOfIntersections)
+  const allpaths = _get_paths(roads,start,finish)
   //console.log("allpaths")
   //console.table(allpaths)
 
   const onlyinodes = allpaths.filter(row => {
     const ilen = (row.filter(xnode => xnode!=-1).length/2)+1
     //console.log("num nodes found:",ilen)
-    return ilen==inodes
+    return ilen==numberOfIntersections
   })
 
   if(onlyinodes.length==0)
@@ -310,10 +313,12 @@ const navigate = (inodes, roads, from, to) => {
   return msg
 }
 
-//console.log(navigate(5,roads,0,4))
-console.log(navigate(2,roads,2,3))
-console.log(navigate(2,roads,3,2))
-// console.log(navigate(4,roads,0,4))
-// console.log(navigate(4,roads,0,0))
-// console.log(navigate(2,roads,1,4))
-// console.log(navigate(3,roads,1,4))
+// console.log(navigate(0,roads,0,0))
+// console.log(navigate(1,roads,0,0))
+// console.log(navigate(0,roads,0,1))
+// console.log(navigate(2,roads,0,1))
+// console.log(navigate(3,roads,0,1))
+// console.log(navigate(2,roads,2,3))
+// console.log(navigate(2,roads,3,2))
+// console.log(navigate(3,roads,2,4))
+// console.log(navigate(2,roads,2,4))
