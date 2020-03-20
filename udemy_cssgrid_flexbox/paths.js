@@ -111,8 +111,9 @@ const _get_arlevel = (arxprev,raw,to,visited,loops)=>{
   return arlevel
 }
 
-const _left_join = (ar1,ar2)=>{
+const _get_leftjoined = (ar1,ar2)=>{
   const join = []
+  if(ar2.length==0) return ar1
 
   const _in_col0 = (val,ar2)=>{
     const ilen = ar2.filter(row => row[0]==val).length
@@ -223,13 +224,12 @@ const _get_min_route = (obj)=>{
   }
 }
 
-const _merge_levels = (arlevels)=>{
-  const ar0 = arlevels[0]
-  const ar01 = _left_join(ar0, arlevels[1]||[] )
-  const ar012 = _left_join(ar01, arlevels[2]||[] )
-  const ar0123 = _left_join(ar012, arlevels[3]||[] )
-  const ar01234 = _left_join(ar0123, arlevels[4]||[] )  
-  return ar01234
+const _get_merged_levels = (arlevels)=>{
+  let armerged = arlevels[0]
+  for(let i=1; i<arlevels.length; i++){
+    armerged = _get_leftjoined(armerged, arlevels[i])
+  }
+  return armerged
 }
 
 //================================
@@ -258,7 +258,7 @@ const _get_paths = (roads,from=0,to=4) => {
       arlevels[i+1] = artmp
   }
 
-  const armerged = _merge_levels(arlevels)
+  const armerged = _get_merged_levels(arlevels)
   //quito las rutas con loops
   const noloops = armerged.filter(row => !_has_capicua(row))
   //me quedo con las rutas que tienen el destino "to"
@@ -283,14 +283,14 @@ const _get_msg = (objtime) => {
 
 //navigate(5, roads, 0, 4);
 const navigate = (inodes, roads, from, to) => {
-  console.log("from:",from,"to:",to,"nodes:",inodes)
+  //console.log("from:",from,"to:",to,"nodes:",inodes)
   const allpaths = _get_paths(roads,from,to)
-  console.log("allpaths")
-  console.table(allpaths)
+  //console.log("allpaths")
+  //console.table(allpaths)
 
   const onlyinodes = allpaths.filter(row => {
     const ilen = (row.filter(xnode => xnode!=-1).length/2)+1
-    console.log("num nodes found:",ilen)
+    //console.log("num nodes found:",ilen)
     return ilen==inodes
   })
 
@@ -308,7 +308,8 @@ const navigate = (inodes, roads, from, to) => {
   return msg
 }
 
-console.log(navigate(4,roads,0,4))
-console.log(navigate(4,roads,0,0))
-console.log(navigate(2,roads,1,4))
-console.log(navigate(3,roads,1,4))
+console.log(navigate(5,roads,0,4))
+// console.log(navigate(4,roads,0,4))
+// console.log(navigate(4,roads,0,0))
+// console.log(navigate(2,roads,1,4))
+// console.log(navigate(3,roads,1,4))
